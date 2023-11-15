@@ -2,4 +2,9 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: false,
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@unocss/nuxt',
+    'nuxt-icon',
+  ],
 })
