@@ -16,7 +16,7 @@ export default defineConfig({
       background: '#020420',
       primary: '#00DC82',
       light: '#CBD5E1',
-    }
+    },
   },
   presets: [
     presetUno(),
