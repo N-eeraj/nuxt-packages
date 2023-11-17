@@ -7,4 +7,13 @@ export default defineNuxtConfig({
     'nuxt-icon',
     'nuxt-simple-sitemap',
   ],
+  runtimeConfig: {
+    public: {
+      siteURL: process.env.NUXT_SITE_URL || '/',
+      siteName: process.env.NUXT_SITE_NAME || 'Nuxt Packages',
+    }
+  },
+  site: {
+    url: process.env.NUXT_SITE_URL,
+  },
 })

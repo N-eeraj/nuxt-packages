@@ -1,31 +1,34 @@
+import siteDescription from '/data/description.txt?raw'
+
 interface MetaObject {
-  title?: string
-  description?: string
-  keywords?: string
-  image?: string
+  pageTitle?: string
+  pageDescription?: string
+  pageKeywords?: string
+  pageImage?: string
 }
 
-const useMeta = ({ title, description, keywords, image }: MetaObject) => {
-  const siteName = 'Nuxt Packages'
-  const siteURL = 'https://nuxt-packages.netlify.app/'
-  const siteDescription = 'Supercharge your web development with Nuxt.js! Explore powerful packages, seamless Vue.js integration, and unleash your creativity today.'
+const useMeta = ({ pageTitle, pageDescription, pageKeywords, pageImage }: MetaObject) => {
+  const runtimeConfig = useRuntimeConfig()
+
+  const siteName = runtimeConfig.public.siteName
+  const siteURL = runtimeConfig.public.siteURL
   const nuxtIcon = '/images/nuxt-icon.svg'
 
   useHead({
     htmlAttrs: { lang: 'en' },
-    title: title || siteName,
+    title: pageTitle || siteName,
     meta: [
-      { name: 'title', content: title },
+      { name: 'title', content: pageTitle },
       { name: 'og:type', content: 'website' },
-      { name: 'og:title', content: title },
+      { name: 'og:title', content: pageTitle },
       { name: 'og:url', content: siteURL },
-      { name: 'description', content: description || siteDescription },
-      { name: 'og:description', content: description || siteDescription },
+      { name: 'description', content: pageDescription || siteDescription },
+      { name: 'og:description', content: pageDescription || siteDescription },
       { name: 'og:site_name', content: siteName },
-      { name: 'og:image', content: image || nuxtIcon },
-      { hid: 'og-image', property: 'og:image', content: image || nuxtIcon },
+      { name: 'og:image', content: pageImage || nuxtIcon },
+      { hid: 'og-image', property: 'og:image', content: pageImage || nuxtIcon },
       { name: 'twitterCard', content: 'summary_large_image' },
-      { name: 'keywords', content: keywords || siteName },
+      { name: 'keywords', content: pageKeywords || siteDescription },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     ],
     link: [
