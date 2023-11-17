@@ -15,6 +15,7 @@
     "@unocss/nuxt": "^0.57.4",
     "nuxt": "^3.8.1",
     "nuxt-icon": "latest",
+    "nuxt-simple-sitemap": "latest",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5"
   }

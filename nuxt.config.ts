@@ -6,5 +6,6 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@unocss/nuxt',
     'nuxt-icon',
+    'nuxt-simple-sitemap',
   ],
 })

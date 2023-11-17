@@ -6,7 +6,7 @@ const handleNuxtVideo = () => {
 
 <template>
   <div class="grid grid-cols-2 justify-items-center gap-x-6 gap-y-5 w-90% max-w-fit">
-    <NuxtLink to="https://nuxt.com/docs/getting-started/installation" target="_blank" class="w-full">
+    <NuxtLink to="https://nuxt.com/docs/getting-started/installation" target="_blank" rel="nofollow" class="w-full">
       <BaseButton tabindex="-1" class="flex justify-center gap-x-2 w-full bg-primary hover:bg-primary/90 text-background">
         <Icon name="ph:rocket-launch-duotone" size="24" />
         Get Started
