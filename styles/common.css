@@ -11,3 +11,17 @@
 :focus {
   @apply outline outline-[#00DC82] rounded-sm;
 }
+
+.full-screen {
+  @apply fixed top-0 left-0 w-screen h-screen;
+}
+
+.position-center-x {
+  @apply left-1/2 -translate-x-1/2;
+}
+.position-center-y {
+  @apply top-1/2 -translate-y-1/2;
+}
+.position-center {
+  @apply top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}

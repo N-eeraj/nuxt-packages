@@ -7,7 +7,7 @@ interface MetaObject {
 
 const useMeta = ({ title, description, keywords, image }: MetaObject) => {
   const siteName = 'Nuxt Packages'
-  const siteURL = origin
+  const siteURL = 'https://nuxt-packages.netlify.app/'
   const siteDescription = 'Supercharge your web development with Nuxt.js! Explore powerful packages, seamless Vue.js integration, and unleash your creativity today.'
   const nuxtIcon = '/images/nuxt-icon.svg'
 

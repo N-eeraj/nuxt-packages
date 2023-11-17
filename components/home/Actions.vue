@@ -1,7 +1,5 @@
 <script setup lang="ts">
-const handleNuxtVideo = () => {
-  console.log('wow')
-}
+const showNuxtVideo = ref(false)
 </script>
 
 <template>
@@ -13,7 +11,7 @@ const handleNuxtVideo = () => {
       </BaseButton>
     </NuxtLink>
 
-    <BaseButton class="flex justify-center gap-x-2 w-full hover:bg-white/10 text-white border-0.5 border-light/50 hover:border-white transition-400" @click="handleNuxtVideo">
+    <BaseButton class="flex justify-center gap-x-2 w-full hover:bg-white/10 text-white border-0.5 border-light/50 hover:border-white transition-400" @click="showNuxtVideo = true">
       <Icon name="ph:video-duotone" size="24" />
       What is Nuxt?
     </BaseButton>
@@ -24,5 +22,9 @@ const handleNuxtVideo = () => {
         Explore Packages
       </BaseButton>
     </NuxtLink>
+
+    <BasePopUp v-model="showNuxtVideo" class="bg-gray-800/75">
+      <iframe src="https://www.youtube-nocookie.com/embed/dCxSsr5xuL8?si=zF_bb19X95YCxunh&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="fixed position-center w-11/12 max-w-xl aspect-video p-3 bg-gray-900 rounded-lg" @click.stop />
+    </BasePopUp>
   </div>
 </template>
