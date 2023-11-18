@@ -8,6 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "check": "bun generate && bun preview",
+    "deploy": "sh deploy.sh",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
