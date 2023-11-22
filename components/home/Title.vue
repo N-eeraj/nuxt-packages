@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center">
+  <header class="flex flex-col items-center">
     <NuxtLink to="/about" class="w-fit">
       <BaseChip tabindex="-1" class="flex justify-center items-center gap-x-1 hover:bg-primary/10 text-primary border-primary/50 hover:border-primary text-xs">
         About this Project
@@ -21,5 +21,5 @@
         Vue Framework
       </span>
     </h2>
-  </div>
+  </header>
 </template>
