@@ -2,6 +2,7 @@
 
 * {
   font-family: 'DM Sans', sans-serif;
+  box-sizing: border-box;
 }
 
 ::selection {
@@ -27,5 +28,5 @@
 }
 
 .screen-padding {
-  @apply px-[calc(50%-640px)];
+  @apply px-[max(calc(50%-640px),_20px)];
 }
