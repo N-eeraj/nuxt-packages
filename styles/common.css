@@ -9,7 +9,7 @@
   @apply bg-[#00DC82]/50;
 }
 
-:focus {
+:focus-visible {
   @apply outline outline-[#00DC82] rounded-sm;
 }
 

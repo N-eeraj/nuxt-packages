@@ -1,6 +1,8 @@
 <script setup lang="ts">
 definePageMeta({
   layout: 'blank',
+  name: 'Home',
+  icon: 'ant-design:home-filled',
 })
 </script>
 
