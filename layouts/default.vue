@@ -1,11 +1,11 @@
 <script setup>
-const openSideBar = ref(!false)
+const openSideBar = ref(false)
 </script>
 
 <template>
-  <LayoutNavBar />
+  <LayoutNavBar v-model:side-bar="openSideBar" />
   <main class="relative full-screen md:flex gap-x-4 screen-padding pt-20 bg-background overflow-y-auto">
-    <LayoutSideBar v-model="openSideBar" />
+    <LayoutSideBar :open="openSideBar" />
     <section>
       <slot />
     </section>
