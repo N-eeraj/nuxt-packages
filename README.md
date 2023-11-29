@@ -7,3 +7,4 @@ This project demonstrates how to use different packages with Nuxt.
 - [Nuxt 3](https://nuxt.com/)
 - [Uno CSS](https://unocss.dev/)
 - [Nuxt Icon](https://nuxt.com/modules/icon)
+- [Bun](https://bun.sh/)

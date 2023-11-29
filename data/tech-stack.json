@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Nuxt 3",
+    "logo": "/images/logos/nuxt.svg",
+    "url": "https://nuxt.com/"
+  },
+  {
+    "name": "Uno CSS",
+    "logo": "/images/logos/unocss.svg",
+    "url": "https://unocss.dev/"
+  },
+  {
+    "name": "Nuxt Icon",
+    "logo": "/images/logos/nuxt-icon.avif",
+    "url": "https://nuxt.com/modules/icon"
+  },
+  {
+    "name": "Bun",
+    "logo": "/images/logos/bun.svg",
+    "url": "https://bun.sh"
+  }
+]
