@@ -15,7 +15,10 @@ export default defineConfig({
     colors: {
       background: '#020420',
       primary: '#00DC82',
-      light: '#CBD5E1',
+      light: {
+        DEFAULT: '#CBD5E1',
+        extra: '#CBD5E199',
+      },
     },
   },
   presets: [

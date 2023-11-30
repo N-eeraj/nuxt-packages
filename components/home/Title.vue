@@ -9,7 +9,7 @@
 
     <NuxtLink to="https://nuxt.com/" target="_blank" rel="nofollow">
       <h1 class="flex justify-center items-center gap-x-3 text-white text-7xl md:text-8xl font-semibold">
-        <img src="/images/nuxt-icon.svg" alt="nuxt-icon" class="w-20 md:w-32">
+        <img src="/images/logos/nuxt.svg" alt="nuxt-icon" class="w-20 md:w-32">
         Nuxt
       </h1>
     </NuxtLink>

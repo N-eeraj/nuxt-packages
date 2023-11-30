@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Nuxt 3",
+    "logo": "/images/logos/nuxt.svg",
+    "url": "https://nuxt.com/",
+    "description": "Nuxt is an open source framework that makes web development intuitive and powerful using Vue JS."
+  },
+  {
+    "name": "Uno CSS",
+    "logo": "/images/logos/unocss.svg",
+    "url": "https://unocss.dev/",
+    "description": "UnoCSS is an instant atomic CSS engine, that is designed to be flexible and extensible."
+  },
+  {
+    "name": "Nuxt Icon",
+    "logo": "/images/logos/nuxt-icon.avif",
+    "url": "https://nuxt.com/modules/icon",
+    "description": "Icon module for Nuxt with 100000+ ready to use icons from Iconify."
+  },
+  {
+    "name": "Bun",
+    "logo": "/images/logos/bun.svg",
+    "url": "https://bun.sh",
+    "description": "Used for as a fast bundler and package manager."
+  }
+]

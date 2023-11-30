@@ -4,7 +4,7 @@ const openSideBar = ref(false)
 
 <template>
   <LayoutNavBar v-model:side-bar="openSideBar" />
-  <main class="relative full-screen md:flex gap-x-4 screen-padding pt-20 bg-background overflow-y-auto">
+  <main class="relative full-screen md:flex gap-x-4 screen-padding pt-20 pb-10 bg-background overflow-y-auto">
     <LayoutSideBar v-model:open="openSideBar" />
     <section>
       <slot />

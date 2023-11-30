@@ -12,7 +12,7 @@ const useMeta = ({ pageTitle, pageDescription, pageKeywords, pageImage }: MetaOb
 
   const siteName = runtimeConfig.public.siteName
   const siteURL = runtimeConfig.public.siteURL
-  const nuxtIcon = '/images/nuxt-icon.svg'
+  const nuxtIcon = '/images/logos/nuxt.svg'
 
   useHead({
     htmlAttrs: { lang: 'en' },
@@ -34,7 +34,7 @@ const useMeta = ({ pageTitle, pageDescription, pageKeywords, pageImage }: MetaOb
     link: [
       {
         rel: 'icon',
-        type: 'image/png',
+        type: 'image/x-icon',
         href: nuxtIcon,
       },
     ],
