@@ -11,8 +11,8 @@ definePageMeta({
       About Nuxt Packages
     </h1>
 
-    <section class="flex flex-col gap-y-6 text-light-extra leading-7">
-      <article class="flex flex-col gap-y-3">
+    <section class="flex flex-col gap-y-6">
+      <article class="flex flex-col gap-y-3 text-light-extra leading-7">
         <p>
           Welcome to our webpage all about Nuxt.js and its incredible libraries and modules! 🚀
         </p>
@@ -27,20 +27,24 @@ definePageMeta({
         </p>
       </article>
 
-      <article class="flex flex-col gap-y-3">
+      <article class="flex flex-col gap-y-4">
         <h2 class="text-white text-2xl font-medium">
           This project was build using:
         </h2>
-        <ul class="flex flex-col gap-y-2">
-          <li v-for="({ name, logo, url }) in techStack" class="w-fit" :key="url">
-            <NuxtLink :to="url" target="_blank" rel="nofollow" class="flex gap-x-3 hover:text-primary">
-              <img :src="logo" :alt="name" class="w-6 aspect-square object-contain" />
-              <span>
+        <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <li v-for="({ name, logo, url, description }) in techStack" class="cols-1" :key="url">
+            <NuxtLink :to="url" target="_blank" rel="nofollow" class="flex flex-col gap-y-2 h-full p-5 bg-gray-800/70 hover:bg-gray-700/70 rounded-lg border border-transparent hover:border-primary duration-200">
+              <img :src="logo" :alt="name" class="w-12 aspect-square object-contain" />
+              <strong class="text-white">
                 {{ name }}
-              </span>
+              </strong>
+              <p class="text-light-extra font-light">
+                {{ description }}
+              </p>
             </NuxtLink>
           </li>
         </ul>
       </article>
     </section>
-  </div></template>
+  </div>
+</template>
