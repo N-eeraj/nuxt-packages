@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 definePageMeta({
   name: 'About',
   icon: 'ph:info-duotone',

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 defineProps({
   open: {
     type: Boolean,
@@ -25,7 +25,7 @@ const currentPath = computed(() => route.href)
     <ul class="flex flex-col gap-y-2.5 p-1 text-light/80 text-sm">
       <li v-for="({ name, path, meta }) in navigations" :key="path">
         <NuxtLink :to="path" class="flex items-center gap-x-2 w-full cursor-pointer text-xl md:text-lg hover:text-light" :class="{ '!text-primary': currentPath === path }" @click="$emit('update:open', false)">
-          <Icon :name="meta?.icon" />
+          <Icon :name="meta?.logo || meta?.icon" />
           <span>
             {{ name }}
           </span>
