@@ -1,7 +1,7 @@
 <script setup>
 definePageMeta({
   name: 'Tailwind CSS',
-  logo: 'devicon:tailwindcss',
+  logo: 'tailwindcss.svg',
   category: 'UI',
 })
 </script>

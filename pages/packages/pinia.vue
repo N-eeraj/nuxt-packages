@@ -1,7 +1,7 @@
 <script setup>
 definePageMeta({
   name: 'Pinia',
-  logo: 'logos:pinia',
+  logo: 'pinia.svg',
   category: 'Extensions',
 })
 </script>
