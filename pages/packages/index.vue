@@ -1,5 +1,6 @@
 <script setup>
-const { options } = useRouter()
+const route = useRoute()
+const { replace, options } = useRouter()
 
 const packages = computed(() => {
   const allPackages = []
@@ -12,8 +13,15 @@ const packages = computed(() => {
 
 const categories = computed(() => Array.from(new Set(packages.value.map(({ category }) => category))))
 
+const filteredCategory = computed(() => route.query.category)
+const filteredPackages = computed(() => packages.value.filter(({ category }) => filteredCategory.value === category))
+
+const packagesList = computed(() => filteredCategory.value ? filteredPackages.value : packages.value)
+
 const handleCategorySelect = category => {
-  console.log(category)
+  if (category === filteredCategory.value)
+    return replace({ query: null })
+  replace({ query: { category } , ...route })
 }
 
 definePageMeta({
@@ -35,7 +43,7 @@ definePageMeta({
         </span>
         <ul class="mt-3">
           <li v-for="category in categories" :key="category">
-            <button class="w-full py-1 pl-3 text-light-extra hover:text-light text-start border-l border-l-light-extra/20 hover:border-l-light duration-400" @click="handleCategorySelect(category)">
+            <button class="w-full py-1 pl-3 text-start border-l duration-400" :class="category === filteredCategory ? 'text-primary border-l-primary': 'text-light-extra hover:text-light border-l-light-extra/20 hover:border-l-light'" @click="handleCategorySelect(category)">
               {{ category }}
             </button>
           </li>
@@ -43,7 +51,7 @@ definePageMeta({
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 w-full">
-        <NuxtLink v-for="({ name, path, description, logo }) in packages" :to="path" class="flex flex-col gap-y-3 max-h-60 p-5 bg-gray-900 hover:bg-transparent ring ring-gray-800 hover:ring-primary rounded duration-400">
+        <NuxtLink v-for="({ name, path, description, logo }) in packagesList" :to="path" class="flex flex-col gap-y-3 max-h-60 p-5 bg-gray-900 hover:bg-transparent ring ring-gray-800 hover:ring-primary rounded duration-400">
           <img :src="`/images/logos/${logo}`" :alt="name" class="w-12 aspect-square object-contain" />
           <strong class="text-light text-lg">
             {{ name }}
