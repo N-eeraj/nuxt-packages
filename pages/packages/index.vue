@@ -43,8 +43,11 @@ definePageMeta({
         </span>
         <ul class="mt-3">
           <li v-for="category in categories" :key="category">
-            <button class="w-full py-1 pl-3 text-start border-l duration-400" :class="category === filteredCategory ? 'text-primary border-l-primary': 'text-light-extra hover:text-light border-l-light-extra/20 hover:border-l-light'" @click="handleCategorySelect(category)">
-              {{ category }}
+            <button class="flex items-center gap-x-1 w-full py-1 pl-3 text-start border-l duration-400" :class="category === filteredCategory ? 'text-primary border-l-primary': 'text-light-extra hover:text-light border-l-light-extra/20 hover:border-l-light'" @click="handleCategorySelect(category)">
+              <Icon :name="packageCategoriesIcons[category]" />
+              <span>
+                {{ category }}
+              </span>
             </button>
           </li>
         </ul>
