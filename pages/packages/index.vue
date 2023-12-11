@@ -1,6 +1,6 @@
 <script setup>
 const route = useRoute()
-const { replace, options } = useRouter()
+const { options } = useRouter()
 
 const packages = computed(() => {
   const allPackages = []
@@ -17,12 +17,6 @@ const filteredCategory = computed(() => route.query.category)
 const filteredPackages = computed(() => packages.value.filter(({ category }) => filteredCategory.value === category))
 
 const packagesList = computed(() => filteredCategory.value ? filteredPackages.value : packages.value)
-
-const handleCategorySelect = category => {
-  if (category === filteredCategory.value)
-    return replace({ query: null })
-  replace({ query: { category } , ...route })
-}
 
 definePageMeta({
   name: 'All Packages',
@@ -42,27 +36,12 @@ definePageMeta({
           Categories
         </span>
         <ul class="mt-3">
-          <li v-for="category in categories" :key="category">
-            <button class="flex items-center gap-x-1 w-full py-1 pl-3 text-start border-l duration-400" :class="category === filteredCategory ? 'text-primary border-l-primary': 'text-light-extra hover:text-light border-l-light-extra/20 hover:border-l-light'" @click="handleCategorySelect(category)">
-              <Icon :name="packageCategoriesIcons[category]" />
-              <span>
-                {{ category }}
-              </span>
-            </button>
-          </li>
+          <PackagesCategory v-for="category in categories" :category="category" :key="category" />
         </ul>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 w-full">
-        <NuxtLink v-for="({ name, path, description, logo }) in packagesList" :to="path" class="flex flex-col gap-y-3 max-h-60 p-5 bg-gray-900 hover:bg-transparent ring ring-gray-800 hover:ring-primary rounded duration-400">
-          <img :src="`/images/logos/${logo}`" :alt="name" class="w-12 aspect-square object-contain" />
-          <strong class="text-light text-lg">
-            {{ name }}
-          </strong>
-          <p class="text-light-extra line-clamp-2">
-            {{ description }}
-          </p>
-        </NuxtLink>
+        <PackagesCard v-for="({ name, path, description, logo }) in packagesList" :name="name" :path="path" :description="description" :logo="logo" :key="name" />
       </div>
     </div>
   </div>
