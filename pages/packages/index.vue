@@ -18,6 +18,25 @@ const filteredPackages = computed(() => packages.value.filter(({ category }) => 
 
 const packagesList = computed(() => filteredCategory.value ? filteredPackages.value : packages.value)
 
+
+const searchInput = ref(null)
+
+const handleSearchFocus = (event) => {
+  if (event.key === '/') {
+    if (searchInput.value !== document.activeElement)
+      event.preventDefault()
+    searchInput.value.focus()
+  }
+}
+
+onMounted(() => {
+  document.addEventListener('keydown', handleSearchFocus)
+})
+
+onBeforeUnmount(() => {
+  document.removeEventListener('keydown', handleSearchFocus)
+})
+
 definePageMeta({
   name: 'All Packages',
   icon: 'ph:package-duotone',
@@ -41,6 +60,10 @@ definePageMeta({
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 w-full">
+        <div class="col-span-1 md:col-span-2 xl:col-span-3">
+          <input ref="searchInput" type="search" placeholder="Search" class="px-4 py-1 bg-transparent text-white border-0.5 border-light-extra/50 focus:border-primary rounded-md" />
+        </div>
+
         <PackagesCard v-for="({ name, path, description, logo }) in packagesList" :name="name" :path="path" :description="description" :logo="logo" :key="name" />
       </div>
     </div>
