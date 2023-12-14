@@ -10,7 +10,7 @@ const { options } = useRouter()
 const route = useRoute()
 
 const mainNavigations = computed(() =>
-  options.routes.filter(({ path }) => ['/', '/about', '/packages'].includes(path))
+  options.routes.filter(({ path }) => [ '/', '/about', '/packages' ].includes(path))
     .sort(({ path: firstPath }, { path: secondPath }) => {
       if (firstPath < secondPath) return -1
       return 1
@@ -25,7 +25,7 @@ const packagesNavigations = computed(() =>
     })
 )
 
-const currentPath = computed(() => route.href)
+const currentPath = computed(() => route.path)
 </script>
 
 <template>

@@ -1,6 +1,6 @@
 <script setup>
 const route = useRoute()
-const { options } = useRouter()
+const { options, replace } = useRouter()
 
 const packages = computed(() => {
   const allPackages = []
@@ -21,20 +21,27 @@ const packagesList = computed(() => filteredCategory.value ? filteredPackages.va
 
 const searchInput = ref(null)
 
-const handleSearchFocus = (event) => {
+const handleSearchChange = (event) => {
   if (event.key === '/') {
     if (searchInput.value !== document.activeElement)
       event.preventDefault()
     searchInput.value.focus()
   }
+  replace({
+    query: {
+      ...route.query,
+      q: searchInput.value.value,
+    } ,
+    ...route
+  })
 }
 
 onMounted(() => {
-  document.addEventListener('keydown', handleSearchFocus)
+  document.addEventListener('keyup', handleSearchChange)
 })
 
 onBeforeUnmount(() => {
-  document.removeEventListener('keydown', handleSearchFocus)
+  document.removeEventListener('keyup', handleSearchChange)
 })
 
 definePageMeta({
@@ -61,7 +68,7 @@ definePageMeta({
 
       <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 w-full">
         <div class="col-span-1 md:col-span-2 xl:col-span-3">
-          <input ref="searchInput" type="search" placeholder="Search" class="px-4 py-1 bg-transparent text-white border-0.5 border-light-extra/50 focus:border-primary rounded-md" />
+          <input ref="searchInput" type="search" placeholder="Search" class="px-4 py-1 bg-transparent text-white border-0.5 border-light-extra/50 focus:border-primary rounded-md" @change="handleSearchChange" />
         </div>
 
         <PackagesCard v-for="({ name, path, description, logo }) in packagesList" :name="name" :path="path" :description="description" :logo="logo" :key="name" />

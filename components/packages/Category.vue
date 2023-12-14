@@ -12,9 +12,13 @@ const { replace } = useRouter()
 const filteredCategory = computed(() => route.query.category)
 
 const handleCategorySelect = category => {
-  if (category === filteredCategory.value)
-    return replace({ query: null })
-  replace({ query: { category } , ...route })
+  replace({
+    query: {
+      ...route.query,
+      category: category === filteredCategory.value ? null : category,
+    } ,
+    ...route
+  })
 }
 </script>
 
