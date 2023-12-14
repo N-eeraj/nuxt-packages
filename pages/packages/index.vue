@@ -57,7 +57,7 @@ definePageMeta({
     </h1>
 
     <div class="flex gap-x-2">
-      <div class="flex-shrink-0 max-sm:hidden w-60">
+      <div class="flex-shrink-0 max-lg:hidden w-60">
         <span class="text-white">
           Categories
         </span>
@@ -66,9 +66,9 @@ definePageMeta({
         </ul>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 w-full">
-        <div class="col-span-1 md:col-span-2 xl:col-span-3">
-          <input ref="searchInput" type="search" placeholder="Search" class="px-4 py-1 bg-transparent text-white border-0.5 border-light-extra/50 focus:border-primary rounded-md" @change="handleSearchChange" />
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 w-full">
+        <div class="relative col-span-1 sm:col-span-2 xl:col-span-3">
+          <input ref="searchInput" placeholder="Search..." class="w-full sm:w-3/5 max-w-66 sm:max-w-56 px-4 py-2 bg-gray-900 text-white placeholder:text-light-extra/30 text-sm border border-light-extra/30 focus:border-primary rounded-md focus:rounded-md focus:outline-none" @input="handleSearchChange" />
         </div>
 
         <PackagesCard v-for="({ name, path, description, logo }) in packagesList" :name="name" :path="path" :description="description" :logo="logo" :key="name" />
