@@ -1,14 +1,14 @@
 <template>
   <header class="flex flex-col items-center">
     <NuxtLink to="/about" class="w-fit">
-      <BaseChip tabindex="-1" class="flex justify-center items-center gap-x-1 hover:bg-primary/10 text-primary border-primary/50 hover:border-primary text-xs">
+      <BaseChip tabindex="-1" class="flex-center gap-x-1 hover:bg-primary/10 text-primary border-primary/50 hover:border-primary text-xs">
         About this Project
         <Icon name="ph:arrow-right" size="18" />
       </BaseChip>
     </NuxtLink>
 
     <NuxtLink to="https://nuxt.com/" target="_blank" rel="nofollow">
-      <h1 class="flex justify-center items-center gap-x-3 text-white text-7xl md:text-8xl font-semibold">
+      <h1 class="flex-center gap-x-3 text-white text-7xl md:text-8xl font-semibold">
         <img src="/images/logos/nuxt.svg" alt="nuxt-icon" class="w-20 md:w-32">
         Nuxt
       </h1>

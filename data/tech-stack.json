@@ -21,6 +21,6 @@
     "name": "Bun",
     "logo": "/images/logos/bun.svg",
     "url": "https://bun.sh",
-    "description": "Used for as a fast bundler and package manager."
+    "description": "Used as a fast bundler and package manager."
   }
 ]

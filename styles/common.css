@@ -27,6 +27,10 @@
   @apply top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
 }
 
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
 .screen-padding {
   @apply px-[max(calc(50%-640px),_20px)];
 }

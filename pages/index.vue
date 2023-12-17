@@ -7,7 +7,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="flex flex-col justify-center items-center gap-y-6 md:gap-y-8 full-screen p-4 text-center bg-background">
+  <div class="flex-center flex-col gap-y-6 md:gap-y-8 full-screen p-4 text-center bg-background">
     <img src="/images/path.svg" alt="decoration vector" class="fixed select-none animate-pulse" />
     <HomeTitle class="relative z-1" />
     <HomeText class="relative z-1" />
