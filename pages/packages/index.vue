@@ -16,7 +16,7 @@ const categories = computed(() => Array.from(new Set(packages.value.map(({ categ
 const filteredCategory = computed(() => route.query.category)
 const filteredPackages = computed(() => packages.value.filter(({ category }) => filteredCategory.value === category))
 
-const packagesList = computed(() => filteredCategory.value ? filteredPackages.value : packages.value)
+const packagesList = computed(() => (filteredCategory.value ? filteredPackages.value : packages.value).filter(({ name }) => name.toLowerCase().includes(route.query.q?.toLowerCase() || '')))
 
 definePageMeta({
   name: 'All Packages',
@@ -25,12 +25,12 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="flex flex-col gap-y-5">
+  <div class="flex flex-col gap-y-5 w-full">
     <h1 class="text-white text-3xl font-medium">
       Nuxt Packages
     </h1>
 
-    <div class="flex gap-x-2">
+    <div class="flex gap-x-2 w-full">
       <div class="flex-shrink-0 max-lg:hidden w-60">
         <span class="text-white">
           Categories
