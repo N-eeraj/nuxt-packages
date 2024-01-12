@@ -20,5 +20,8 @@
     "nuxt-simple-sitemap": "latest",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.5.1"
   }
 }

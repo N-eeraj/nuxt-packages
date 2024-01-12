@@ -2,8 +2,9 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-    '@nuxtjs/tailwindcss',
+    '@pinia/nuxt',
     '@unocss/nuxt',
+    '@nuxtjs/tailwindcss',
     'nuxt-icon',
     'nuxt-simple-sitemap',
   ],
