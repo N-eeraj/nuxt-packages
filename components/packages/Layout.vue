@@ -3,7 +3,7 @@ const { meta } = useRoute()
 </script>
 
 <template>
-  <div class="flex flex-col gap-y-2 h-32">
+  <div class="flex flex-col gap-y-2 h-30">
     <div class="flex items-center gap-x-4">
       <img :src="`/images/logos/${meta.logo}`" :alt="meta.name" class="w-12" />
       <h1 class="text-white text-3xl font-bold">
@@ -18,7 +18,7 @@ const { meta } = useRoute()
   <section class="mb-5">
     <BaseCodeSnippet>
       <template #title>
-        <NuxtLink to="#installation" class="text-white text-2xl font-bold">
+        <NuxtLink to="#installation" class="package-subtitle">
           Installation
         </NuxtLink>
       </template>
@@ -29,14 +29,14 @@ const { meta } = useRoute()
   <section class="mb-5">
     <BaseCodeSnippet>
       <template #title>
-        <NuxtLink to="#usage" class="text-white text-2xl font-bold">
-          Usage
+        <NuxtLink to="#demo" class="package-subtitle">
+          Setup
         </NuxtLink>
       </template>
       <template #description>
-        <slot name="usage-description" />
+        <slot name="demo-description" />
       </template>
-      <slot name="usage" />
+      <slot name="demo" />
     </BaseCodeSnippet>
   </section>
 

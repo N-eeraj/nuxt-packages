@@ -34,3 +34,7 @@
 .screen-padding {
   @apply px-[max(calc(50%-640px),_20px)];
 }
+
+.package-subtitle {
+  @apply text-white text-2xl font-bold;
+}

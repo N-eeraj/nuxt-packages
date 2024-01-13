@@ -17,16 +17,16 @@ definePageMeta({
     <template #installation>
 <pre class="overflow-auto">bun i @pinia/nuxt</pre>
     </template>
-    <template #usage-description>
+    <template #demo-description>
       Add the following line to nuxt.config.js
     </template>
 
-    <template #usage>
+    <template #demo>
 <pre class="overflow-auto">modules: ['@pinia/nuxt']</pre>
     </template>
 
     <section>
-      <NuxtLink to="#usage" class="text-white text-2xl font-bold">
+      <NuxtLink to="#demo" class="package-subtitle">
         <h2>
           Demo
         </h2>
@@ -54,7 +54,7 @@ const { updateCount } = demoStore
         </BaseCodeSnippet>
       </div>
 
-      <button class="min-w-[180px] mt-5 p-2 bg-primary hover:bg-primary/75 text-background rounded" @click="updateCount">
+      <button class="w-32 mt-8 p-2 bg-primary hover:bg-primary/75 text-background rounded" @click="updateCount">
         Count is:
         {{ counter }}
       </button>
