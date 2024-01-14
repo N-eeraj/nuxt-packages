@@ -6,8 +6,19 @@ defineProps({
   },
 })
 
+const { setToast } = useToastStore()
+
+const copyIcon = ref('ph:copy')
+
 const code = ref(null)
-const copyCode = () => navigator.clipboard.writeText(code.value.innerText)
+const copyCode = () => {
+  copyIcon.value = 'ph:check-square-duotone'
+  navigator.clipboard.writeText(code.value.innerText)
+  setToast(true, 'Copied to clipboard')
+  setTimeout(() => {
+    copyIcon.value = 'ph:copy'
+  }, 2000)
+}
 </script>
 
 <template>
@@ -25,7 +36,7 @@ const copyCode = () => navigator.clipboard.writeText(code.value.innerText)
       <code ref="code" class="block min-h-12 p-3 text-light text-sm">
         <slot />
       </code>
-      <Icon name="ph:copy" class="absolute top-4 right-4 text-light cursor-pointer" @click="copyCode" />
+      <Icon :name="copyIcon" class="absolute top-4 right-4 text-light cursor-pointer" @click="copyCode" />
     </div>
   </section>
 </template>
