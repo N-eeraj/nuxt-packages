@@ -13,7 +13,10 @@ import {
 export default defineConfig({
   theme: {
     colors: {
-      background: '#020420',
+      background: {
+        DEFAULT: '#020420',
+        grey: '#0F172A',
+      },
       primary: '#00DC82',
       light: {
         DEFAULT: '#CBD5E1',

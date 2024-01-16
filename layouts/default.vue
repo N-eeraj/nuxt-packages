@@ -10,4 +10,5 @@ const openSideBar = ref(false)
       <slot />
     </section>
   </main>
+  <BaseToast />
 </template>
