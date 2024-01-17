@@ -1,9 +1,4 @@
 <script setup>
-import { storeToRefs } from 'pinia'
-const demoStore = useDemoStore()
-const { counter } = storeToRefs(demoStore)
-const { updateCount } = demoStore
-
 definePageMeta({
   name: 'Pinia',
   logo: 'pinia.svg',
@@ -55,17 +50,15 @@ const { updateCount } = demoStore
 
 &lt;template&gt;
   &lt;button class="w-32 mt-8 p-2 bg-primary hover:bg-primary/75 text-background rounded" @click="updateCount"&gt;
-    Count is: {{ counter }}
+    Count is:
+    &#123;&#123; counter &#125;&#125;
   &lt;/button&gt;
 &lt;/template&gt;
 </pre>
         </BaseCodeSnippet>
       </div>
 
-      <button class="w-32 mt-8 p-2 bg-primary hover:bg-primary/75 text-background rounded" @click="updateCount">
-        Count is:
-        {{ counter }}
-      </button>
+      <PackagesDemoPinia />
     </section>
   </PackagesLayout>
 </template>
