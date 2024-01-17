@@ -29,16 +29,18 @@ const { meta } = useRoute()
   <section class="mb-5">
     <BaseCodeSnippet>
       <template #title>
-        <NuxtLink to="#demo" class="package-subtitle">
+        <NuxtLink to="#setup" class="package-subtitle">
           Setup
         </NuxtLink>
       </template>
       <template #description>
-        <slot name="demo-description" />
+        <slot name="setup-description" />
       </template>
-      <slot name="demo" />
+      <slot name="setup" />
     </BaseCodeSnippet>
   </section>
 
-  <slot />
+  <section class="pb-5">
+    <slot />
+  </section>
 </template>
