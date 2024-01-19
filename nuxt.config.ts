@@ -4,8 +4,9 @@ export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt',
     '@unocss/nuxt',
-    '@nuxtjs/tailwindcss',
     'nuxt-icon',
+    '@nuxtjs/tailwindcss',
+    '@formkit/auto-animate/nuxt',
     'nuxt-simple-sitemap',
   ],
   runtimeConfig: {

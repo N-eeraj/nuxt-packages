@@ -7,7 +7,7 @@
     </NuxtLink>
 
     <div class="flex gap-x-5 flex-wrap mb-4">
-      <BaseCodeSnippet file-name="tailwind.config.ts" class="flex-1 w-5/12">
+      <BaseCodeSnippet file-name="tailwind.config.ts" class="flex-1 w-full md:w-5/12">
         <pre>import type { Config } from 'tailwindcss'
 
 export default &lt;Partial&lt;Config&gt;&gt;{
@@ -23,7 +23,7 @@ export default &lt;Partial&lt;Config&gt;&gt;{
   },
 }</pre>
       </BaseCodeSnippet>
-      <BaseCodeSnippet file-name="Heading.vue" class="flex-1 w-5/12">
+      <BaseCodeSnippet file-name="Heading.vue" class="flex-1 w-full md:w-5/12">
         <pre class="overflow-auto">&lt;template&gt;
   &lt;h1 class="p-4 bg-tailwind-dark text-tailwind-primary border border-tailwind-primary rounded"&gt;
     A utility-first CSS framework packed with classes.
