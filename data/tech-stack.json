@@ -24,6 +24,12 @@
     "description": "Icon module for Nuxt with 100000+ ready to use icons from Iconify."
   },
   {
+    "name": "Auto Animate",
+    "logo": "/images/logos/auto-animate.svg",
+    "url": "https://auto-animate.formkit.com/",
+    "description": "Automatic animations for your Nuxt app with a single line of code"
+  },
+  {
     "name": "Bun",
     "logo": "/images/logos/bun.svg",
     "url": "https://bun.sh",
