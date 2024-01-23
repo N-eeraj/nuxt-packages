@@ -40,12 +40,14 @@ definePageMeta({
         </ul>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 w-full">
+      <div class="flex flex-col gap-8 w-full">
         <div class="col-span-1 sm:col-span-2 xl:col-span-3">
           <PackagesSearch />
         </div>
 
-        <PackagesCard v-for="({ name, path, description, logo }) in packagesList" :name="name" :path="path" :description="description" :logo="logo" :key="name" />
+        <div v-auto-animate class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
+          <PackagesCard v-for="({ name, path, description, logo }) in packagesList" :name="name" :path="path" :description="description" :logo="logo" :key="name" />
+        </div>
       </div>
     </div>
   </div>
