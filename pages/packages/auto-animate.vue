@@ -19,7 +19,7 @@ definePageMeta({
     <template #setup>
       <pre class="overflow-auto">modules: ['@formkit/auto-animate/nuxt']</pre>
     </template>
-    
+
     <PackagesDemoAutoAnimate />
   </PackagesLayout>
 </template>

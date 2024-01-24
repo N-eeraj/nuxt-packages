@@ -16,7 +16,7 @@
     "@nuxtjs/tailwindcss": "^6.10.4",
     "@unocss/nuxt": "^0.58.3",
     "nuxt": "^3.8.1",
-    "nuxt-icon": "latest",
+    "nuxt-icon": "^0.6.8",
     "nuxt-simple-sitemap": "latest",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5"
