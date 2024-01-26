@@ -2,7 +2,7 @@
 const usageSteps = [
   'Create a icons folder in assets: assets/icons',
   'Drop your icons with the .svg extension into the icons folder',
-  'In the project, use <nuxt-icon name="" />, where name is the name of your svg icon from the folder',
+  'In the project, use <NuxtIcon name="" />, where name is the name of your svg icon from the folder',
 ]
 
 definePageMeta({
@@ -44,5 +44,6 @@ definePageMeta({
       </p>
     </section>
 
+    <PackagesDemoNuxtIcons />
   </PackagesLayout>
 </template>
