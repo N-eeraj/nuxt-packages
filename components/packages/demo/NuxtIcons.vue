@@ -6,7 +6,7 @@
       </h2>
     </NuxtLink>
 
-    <BaseCodeSnippet file-name="App.vue" class="flex-1 w-full mb-4">
+    <BaseCodeSnippet file-name="App.vue" class="w-full mb-4">
         <pre class="overflow-auto">&lt;template&gt;
   &lt;NuxtIcon name="home" /&gt;
   &lt;NuxtIcon name="tech/html" filled /&gt;

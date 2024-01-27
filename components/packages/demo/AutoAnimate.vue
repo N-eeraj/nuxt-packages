@@ -25,7 +25,7 @@ setItems()
       </h2>
     </NuxtLink>
     
-    <BaseCodeSnippet file-name="List.vue" class="w-full mb-4">
+    <BaseCodeSnippet file-name="List.vue" class="mb-4">
       <pre class="overflow-auto">&lt;script setup&gt;
 const items = ref([])
 
@@ -49,7 +49,7 @@ setItems()
   &lt;template v-if="items.length"&gt;
     &lt;ul v-auto-animate class="grid md:grid-cols-4 gap-4"&gt;
       &lt;li v-for="item in items" class="p-2 bg-background text-primary border border-primary rounded cursor-pointer" :key="item" @click="removeItem(item)"&gt;
-        {{ item }}
+        &#123;&#123; item &#125;&#125;
       &lt;/li&gt;
     &lt;/ul&gt;
     &lt;button class="w-32 mt-4 p-2 bg-primary text-dark rounded cursor-pointer" @click="randomize"&gt;

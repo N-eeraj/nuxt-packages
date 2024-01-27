@@ -6,7 +6,7 @@
       </h2>
     </NuxtLink>
 
-    <BaseCodeSnippet file-name="App.vue" class="flex-1 w-full mb-4">
+    <BaseCodeSnippet file-name="App.vue" class="w-full mb-4">
         <pre class="overflow-auto">&lt;template&gt;
   &lt;Icon name="uil:github" color="white" size="36" /&gt;
   &lt;Icon name="🚀" size="36" /&gt;
