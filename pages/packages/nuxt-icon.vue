@@ -20,6 +20,6 @@ definePageMeta({
       <pre class="overflow-auto">modules: ['nuxt-icon']</pre>
     </template>
 
-    <PackagesDemoNuxtIcon/>
+    <PackagesDemoNuxtIcon />
   </PackagesLayout>
 </template>

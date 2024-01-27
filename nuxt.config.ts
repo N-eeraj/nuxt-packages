@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     'nuxt-icon',
     '@nuxtjs/tailwindcss',
+    'nuxt-icons',
     '@formkit/auto-animate/nuxt',
     'nuxt-simple-sitemap',
   ],
