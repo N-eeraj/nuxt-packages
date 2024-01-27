@@ -33,7 +33,7 @@ const copyCode = () => {
       <code v-if="fileName" class="w-full p-3 bg-background-grey text-light text-sm">
         {{ fileName }}
       </code>
-      <code ref="code" class="block min-h-12 p-3 text-light text-sm">
+      <code ref="code" class="block min-h-12 max-h-72 p-3 text-light text-sm overflow-y-auto">
         <slot />
       </code>
       <Icon :name="copyIcon" class="absolute top-4 right-4 text-light cursor-pointer" @click="copyCode" />
