@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     'nuxt-icons',
     '@formkit/auto-animate/nuxt',
+    'nuxt-headlessui',
     'nuxt-simple-sitemap',
   ],
   runtimeConfig: {
