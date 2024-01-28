@@ -10,7 +10,7 @@ const enabled = ref(false)
       </h2>
     </NuxtLink>
 
-    <BaseCodeSnippet file-name="store.js" class="mb-4">
+    <BaseCodeSnippet file-name="Switch.vue" class="mb-4">
       <pre class="overflow-auto">
 &lt;script setup&gt;
 const enabled = ref(false)
