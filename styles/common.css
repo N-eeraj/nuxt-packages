@@ -31,8 +31,12 @@
   @apply flex justify-center items-center;
 }
 
-.screen-padding {
-  @apply px-[max(calc(50%-640px),_20px)];
+.pl-screen {
+  @apply pl-[max(calc(50vw-640px),_20px)];
+}
+
+.pr-screen {
+  @apply pr-[max(calc(50vw-640px),_20px)];
 }
 
 .package-subtitle {
