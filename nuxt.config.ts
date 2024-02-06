@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@formkit/auto-animate/nuxt',
     'nuxt-headlessui',
     '@vee-validate/nuxt',
+    '@nuxtjs/google-fonts',
     'nuxt-simple-sitemap',
   ],
   veeValidate: {
@@ -20,6 +21,16 @@ export default defineNuxtConfig({
       FieldArray: 'VeeFieldArray',
       ErrorMessage: 'VeeErrorMessage',
     },
+  },
+  googleFonts: {
+    families: {
+      Montserrat: true,
+      Lato: [100, 900],
+      'Protest Revolution': {
+        wght: [100, 400],
+        ital: [100]
+      },
+    }
   },
   runtimeConfig: {
     public: {
