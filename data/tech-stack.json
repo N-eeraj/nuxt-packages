@@ -6,6 +6,12 @@
     "description": "Nuxt is an open source framework that makes web development intuitive and powerful using Vue JS."
   },
   {
+    "name": "Bun",
+    "logo": "/images/logos/bun.svg",
+    "url": "https://bun.sh",
+    "description": "Used as a fast bundler and package manager."
+  },
+  {
     "name": "Pinia",
     "logo": "/images/logos/pinia.svg",
     "url": "https://pinia.vuejs.org/",
@@ -30,9 +36,9 @@
     "description": "Automatic animations for your Nuxt app with a single line of code"
   },
   {
-    "name": "Bun",
-    "logo": "/images/logos/bun.svg",
-    "url": "https://bun.sh",
-    "description": "Used as a fast bundler and package manager."
+    "name": "Google Fonts",
+    "logo": "/images/logos/google-fonts.avif",
+    "url": "https://google-fonts.nuxtjs.org/",
+    "description": "Google Fonts module for Nuxt"
   }
 ]

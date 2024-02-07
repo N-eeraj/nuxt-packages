@@ -24,6 +24,7 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
+      'DM Sans': true,
       Montserrat: true,
       Lato: [100, 900],
       'Protest Revolution': {
