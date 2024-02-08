@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     '@vee-validate/nuxt',
     '@nuxtjs/google-fonts',
     'nuxt-simple-sitemap',
+    '@nuxtjs/device',
   ],
   veeValidate: {
     autoImports: true,
