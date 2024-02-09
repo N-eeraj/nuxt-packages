@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     'nuxt-headlessui',
     '@vee-validate/nuxt',
     '@nuxtjs/google-fonts',
+    '@nuxtjs/color-mode',
     'nuxt-simple-sitemap',
     '@nuxtjs/device',
   ],
