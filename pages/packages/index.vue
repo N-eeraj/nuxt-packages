@@ -11,7 +11,7 @@ const packages = computed(() => {
   return allPackages
 })
 
-const categories = computed(() => Array.from(new Set(packages.value.map(({ category }) => category))))
+const categories = computed(() => Array.from(new Set(packages.value.map(({ category }) => category))).toSorted())
 
 const filteredCategory = computed(() => route.query.category)
 const filteredPackages = computed(() => packages.value.filter(({ category }) => filteredCategory.value === category))

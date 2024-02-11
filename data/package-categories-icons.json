@@ -1,6 +1,7 @@
 {
   "Extensions": "ph:puzzle-piece-duotone",
   "Fonts": "ph:text-aa-duotone",
+  "Images": "ph:image-duotone",
   "Libraries": "ph:books-duotone",
   "UI": "ph:layout-duotone"
 }
