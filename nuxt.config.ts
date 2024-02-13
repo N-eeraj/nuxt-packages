@@ -13,8 +13,9 @@ export default defineNuxtConfig({
     '@formkit/auto-animate/nuxt',
     '@nuxtjs/google-fonts',
     '@nuxtjs/color-mode',
-    '@nuxtjs/device',
+    'nuxt-swiper',
     'nuxt-marquee',
+    '@nuxtjs/device',
     'nuxt-simple-sitemap',
   ],
   veeValidate: {
