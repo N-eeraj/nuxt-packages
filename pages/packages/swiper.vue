@@ -19,5 +19,7 @@ definePageMeta({
     <template #setup>
       <pre class="overflow-auto">modules: ['nuxt-swiper']</pre>
     </template>
+
+    <PackagesDemoSwiper />
   </PackagesLayout>
 </template>
