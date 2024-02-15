@@ -23,6 +23,7 @@ export default &lt;Partial&lt;Config&gt;&gt;{
   },
 }</pre>
       </BaseCodeSnippet>
+
       <BaseCodeSnippet file-name="Heading.vue" class="flex-1 w-full md:w-5/12">
         <pre class="overflow-auto">&lt;template&gt;
   &lt;h1 class="p-4 bg-tailwind-dark text-tailwind-primary border border-tailwind-primary rounded"&gt;

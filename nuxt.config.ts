@@ -14,6 +14,8 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@nuxtjs/color-mode',
     'nuxt-swiper',
+    '@nuxtjs/device',
+    '@nuxtjs/i18n',
     'nuxt-marquee',
     '@nuxtjs/device',
     'nuxt-simple-sitemap',
