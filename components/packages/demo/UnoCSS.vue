@@ -46,6 +46,7 @@ export default defineConfig({
   ],
 })</pre>
       </BaseCodeSnippet>
+
       <BaseCodeSnippet file-name="Heading.vue" class="flex-1 w-full md:w-5/12">
         <pre class="overflow-auto">&lt;template&gt;
   &lt;h1 class="p-4 bg-background-grey text-primary border border-primary rounded"&gt;

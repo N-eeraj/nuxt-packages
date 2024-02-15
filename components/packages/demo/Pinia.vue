@@ -24,6 +24,7 @@ export const useDemoStore = defineStore('demo', () => {
   return { counter, updateCount }
 })</pre>
       </BaseCodeSnippet>
+
       <BaseCodeSnippet file-name="Counter.vue" class="flex-1 w-full md:w-5/12">
         <pre class="overflow-auto">&lt;script setup&gt;
 import { storeToRefs } from 'pinia'
