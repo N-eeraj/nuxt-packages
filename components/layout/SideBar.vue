@@ -18,7 +18,7 @@ const mainNavigations = computed(() =>
 )
 
 const packagesNavigations = computed(() =>
-  options.routes.filter(({ path }) => path.startsWith('/packages/'))
+  options.routes.filter(({ path }) => path.startsWith('/packages/') && path.split('/').length === 3)
     .sort(({ path: firstPath }, { path: secondPath }) => {
       if (firstPath < secondPath) return -1
       return 1

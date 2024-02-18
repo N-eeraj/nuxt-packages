@@ -5,7 +5,7 @@ const { options } = useRouter()
 const packages = computed(() => {
   const allPackages = []
   options.routes.forEach(({ path, meta }) => {
-    if (path.startsWith('/packages/'))
+    if (path.startsWith('/packages/') && path.split('/').length === 3)
       allPackages.push({ path, ...meta })
   })
   return allPackages
