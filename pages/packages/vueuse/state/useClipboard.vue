@@ -13,15 +13,8 @@ definePageMeta({
     useClipboard    
   </h1>
 
-  <div class="flex gap-x-5 flex-wrap">
-    <BaseCodeSnippet file-name="store.js" class="flex-1 w-full md:w-5/12">
-      <pre class="overflow-auto">import { createGlobalState, useStorage } from '@vueuse/core'
-
-export const useVueUseStore = createGlobalState(() => useStorage('vueuse-local-storage-counter', 0))</pre>
-    </BaseCodeSnippet>
-
-    <BaseCodeSnippet file-name="Counter.vue" class="flex-1 w-full md:w-5/12">
-      <pre class="overflow-auto">&lt;script setup&gt;
+  <BaseCodeSnippet file-name="Clipboard.vue" class="flex-1 w-full">
+    <pre class="overflow-auto">&lt;script setup&gt;
   const source = ref('Hello')
   const { text, copy, copied, isSupported } = useClipboard({ source })
 &lt;/script&gt;
@@ -44,8 +37,7 @@ export const useVueUseStore = createGlobalState(() => useStorage('vueuse-local-s
     Your browser does not support Clipboard API
   &lt;/p&gt;
 &lt;/template&gt;</pre>
-    </BaseCodeSnippet>
-  </div>
+  </BaseCodeSnippet>
 
   <div v-if="isSupported" class="mt-4 flex flex-col gap-y-2">
     <input v-model="source" type="text" class="p-2 bg-background-grey text-light-extra" />
