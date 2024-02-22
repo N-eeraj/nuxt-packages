@@ -13,8 +13,8 @@ definePageMeta({
     useClipboard    
   </h1>
 
-  <BaseCodeSnippet file-name="Counter.vue" class="flex-1 w-full md:w-5/12">
-      <pre class="overflow-auto">&lt;script setup&gt;
+  <BaseCodeSnippet file-name="Counter.vue" class="w-fit">
+    <pre class="overflow-auto">&lt;script setup&gt;
   import { useDateFormat, useNow } from '@vueuse/core'
   const dateTime = useDateFormat(useNow(), 'dddd, MMM Do YYYY hh:mm:ss A')
 &lt;/script&gt;
