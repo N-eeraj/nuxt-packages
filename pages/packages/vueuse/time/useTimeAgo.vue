@@ -11,10 +11,10 @@ definePageMeta({
 
 <template>
   <h1 class="text-white text-2xl">
-    useVibrate    
+    useTimeAgo    
   </h1>
 
-  <BaseCodeSnippet file-name="Counter.vue" class="w-fit">
+  <BaseCodeSnippet file-name="TimeAgo.vue" class="w-fit">
     <pre class="overflow-auto">&lt;script setup&gt;
   import { useTimeAgo } from '@vueuse/core'
   const date = new Date(2000, 0, 1)
@@ -22,8 +22,8 @@ definePageMeta({
 &lt;/script&gt;
 
 &lt;template&gt;
-  &lt;div class="text-white"&gt;
-    &lt;strong class="text-primary"&gt;
+  &lt;div&gt;
+    &lt;strong&gt;
       &#123;&#123; timeAgo &#125;&#125;
     &lt;/strong&gt;
     since
