@@ -19,14 +19,16 @@ const demos = computed(() => {
   <NuxtLink to="#demo" class="package-subtitle">
     Demos
   </NuxtLink>
-  <div v-for="([ category, list ]) of Object.entries(demos)" class="mt-4" :key="category">
-    <h2 class="text-light text-xl">
+  <details v-for="([ category, list ]) of Object.entries(demos)" class="mt-4" :key="category">
+    <summary class=" text-light text-xl cursor-pointer">
       {{ category }}
-    </h2>
-    <div class="flex flex-col gap-y-1">
-      <NuxtLink v-for="({ meta, path }) in list" :to="path" class="block w-fit text-primary opacity-75 hover:opacity-100" :key="path">
-        {{ meta.name }}
-      </NuxtLink>
-    </div>
-  </div>
+    </summary>
+    <ul class="pl-4">
+      <li v-for="({ meta, path }) in list" :key="path">
+        <NuxtLink :to="path" class="block w-fit text-primary opacity-75 hover:opacity-100">
+          {{ meta.name }}
+        </NuxtLink>
+      </li>
+    </ul>
+  </details>
 </template>
