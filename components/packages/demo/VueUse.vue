@@ -19,8 +19,8 @@ const demos = computed(() => {
   <NuxtLink to="#demo" class="package-subtitle">
     Demos
   </NuxtLink>
-  <details v-for="([ category, list ]) of Object.entries(demos)" class="mt-4" :key="category">
-    <summary class=" text-light text-xl cursor-pointer">
+  <details v-for="([ category, list ]) of Object.entries(demos)" class="text-light-extra hover:text-light open:text-light w-fit mt-4 duration-400" :key="category">
+    <summary class="text-xl cursor-pointer">
       {{ category }}
     </summary>
     <ul class="pl-4">
