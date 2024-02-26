@@ -11,7 +11,7 @@ definePageMeta({
 
 <template>
   <h1 class="text-white text-2xl">
-    get    
+    get
   </h1>
 
   <BaseCodeSnippet file-name="get.vue" class="w-fit">

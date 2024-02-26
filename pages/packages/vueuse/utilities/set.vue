@@ -13,7 +13,7 @@ definePageMeta({
 
 <template>
   <h1 class="text-white text-2xl">
-    set    
+    set
   </h1>
 
   <BaseCodeSnippet file-name="set.vue" class="w-fit">
