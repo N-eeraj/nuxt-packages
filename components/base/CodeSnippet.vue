@@ -29,7 +29,7 @@ const copyCode = () => {
     <p class="text-light-extra">
       <slot name="description" />
     </p>
-    <div class="relative flex flex-col bg-bluegray-800 border border-light-extra/25 rounded-md overflow-hidden">
+    <div class="relative flex flex-col min-w-50 bg-bluegray-800 border border-light-extra/25 rounded-md overflow-hidden">
       <code v-if="fileName" class="w-full p-3 bg-background-grey text-light text-sm">
         {{ fileName }}
       </code>
