@@ -1,23 +1,6 @@
 <script setup>
-definePageMeta({
-  name: 'Google Fonts',
-  logo: 'google-fonts.avif',
-  category: 'Fonts',
-  description: 'Google Fonts module for Nuxt',
-})
-</script>
-
-<template>
-  <PackagesLayout>
-    <template #installation>
-      <pre class="overflow-auto">bun i -D @nuxtjs/google-fonts</pre>
-    </template>
-
-    <template #setup-description>
-      Add the following lines to nuxt.config.{ts,js}
-    </template>
-    <template #setup>
-      <pre class="overflow-auto">modules: ['@nuxtjs/google-fonts'],
+const installationCode = `bun i -D @nuxtjs/google-fonts`
+const setUpCode = `modules: ['@nuxtjs/google-fonts'],
 googleFonts: {
   families: {
     Montserrat: true,
@@ -27,9 +10,21 @@ googleFonts: {
       ital: [100]
     },
   }
-},</pre>
-    </template>
+},`
 
+definePageMeta({
+  name: 'Google Fonts',
+  logo: 'google-fonts.avif',
+  category: 'Fonts',
+  description: 'Google Fonts module for Nuxt',
+})
+</script>
+
+<template>
+  <PackagesLayout :installation-code="installationCode" :set-up-code="setUpCode">
+    <template #setup-description>
+      Add the following lines to nuxt.config.{ts,js}
+    </template>
     <PackagesDemoGoogleFonts />
   </PackagesLayout>
 </template>

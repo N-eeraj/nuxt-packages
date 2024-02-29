@@ -1,4 +1,7 @@
 <script setup>
+const installationCode = `bun i -D nuxt-marquee`
+const setUpCode = `modules: ['nuxt-marquee']`
+
 definePageMeta({
   name: 'Marquee',
   logo: 'marquee.avif',
@@ -8,18 +11,10 @@ definePageMeta({
 </script>
 
 <template>
-  <PackagesLayout>
-    <template #installation>
-      <pre class="overflow-auto">bun i -D nuxt-marquee</pre>
-    </template>
-
+  <PackagesLayout :installation-code="installationCode" :set-up-code="setUpCode">
     <template #setup-description>
       Add the following line to the modules section of nuxt.config.{ts,js}
     </template>
-    <template #setup>
-      <pre class="overflow-auto">modules: ['nuxt-marquee']</pre>
-    </template>
-
     <PackagesDemoMarquee />
   </PackagesLayout>
 </template>

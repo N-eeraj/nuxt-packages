@@ -1,4 +1,7 @@
 <script setup>
+const installationCode = `bun i @unocss/nuxt`
+const setUpCode = `modules: ['@unocss/nuxt']`
+
 definePageMeta({
   name: 'UnoCSS',
   logo: 'unocss.svg',
@@ -8,18 +11,10 @@ definePageMeta({
 </script>
 
 <template>
-  <PackagesLayout>
-    <template #installation>
-      <pre class="overflow-auto">bun i @unocss/nuxt</pre>
-    </template>
-
+  <PackagesLayout :installation-code="installationCode" :set-up-code="setUpCode">
     <template #setup-description>
       Add the following line to the modules section of nuxt.config.{ts,js}
     </template>
-    <template #setup>
-      <pre class="overflow-auto">modules: ['@unocss/nuxt']</pre>
-    </template>
-
     <PackagesDemoUnoCSS />
   </PackagesLayout>
 </template>

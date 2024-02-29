@@ -1,4 +1,7 @@
 <script setup>
+const installationCode = `bun i -D @nuxtjs/device`
+const setUpCode = `modules: ['@nuxtjs/device']`
+
 definePageMeta({
   name: 'Devices',
   category: 'Extensions',
@@ -7,18 +10,10 @@ definePageMeta({
 </script>
 
 <template>
-  <PackagesLayout>
-    <template #installation>
-      <pre class="overflow-auto">bun i -D @nuxtjs/device</pre>
-    </template>
-
+  <PackagesLayout :installation-code="installationCode" :set-up-code="setUpCode">
     <template #setup-description>
       Add the following line to the modules section of nuxt.config.{ts,js}
     </template>
-    <template #setup>
-      <pre class="overflow-auto">modules: ['@nuxtjs/device']</pre>
-    </template>
-
     <PackagesDemoDevice />
   </PackagesLayout>
 </template>
