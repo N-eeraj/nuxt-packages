@@ -1,23 +1,6 @@
 <script setup>
-definePageMeta({
-  name: 'vee-validate',
-  logo: 'vee-validate.png',
-  category: 'Libraries',
-  description: 'Painless Vue forms for Nuxt',
-})
-</script>
-
-<template>
-  <PackagesLayout>
-    <template #installation>
-      <pre class="overflow-auto">bun i @vee-validate/nuxt</pre>
-    </template>
-
-    <template #setup-description>
-      Add the following lines to nuxt.config.{ts,js}
-    </template>
-    <template #setup>
-      <pre class="overflow-auto">modules: ['@vee-validate/nuxt']
+const installationCode = `bun i @vee-validate/nuxt`
+const setUpCode = `modules: ['@vee-validate/nuxt']
 veeValidate: {
   // disable or enable auto imports
   autoImports: true,
@@ -28,9 +11,21 @@ veeValidate: {
     FieldArray: 'VeeFieldArray',
     ErrorMessage: 'VeeErrorMessage',
   },
-},</pre>
-    </template>
+},`
 
+definePageMeta({
+  name: 'vee-validate',
+  logo: 'vee-validate.png',
+  category: 'Libraries',
+  description: 'Painless Vue forms for Nuxt',
+})
+</script>
+
+<template>
+  <PackagesLayout :installation-code="installationCode" :set-up-code="setUpCode">
+    <template #setup-description>
+      Add the following lines to nuxt.config.{ts,js}
+    </template>
     <PackagesDemoVeeValidate />
   </PackagesLayout>
 </template>

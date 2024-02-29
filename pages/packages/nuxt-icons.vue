@@ -1,4 +1,7 @@
 <script setup>
+const installationCode = `bun i nuxt-icons`
+const setUpCode = `modules: ['nuxt-icons']`
+
 const usageSteps = [
   'Create a icons folder in assets: assets/icons',
   'Drop your icons with the .svg extension into the icons folder',
@@ -14,16 +17,9 @@ definePageMeta({
 </script>
 
 <template>
-  <PackagesLayout>
-    <template #installation>
-      <pre class="overflow-auto">bun i nuxt-icons</pre>
-    </template>
-
+  <PackagesLayout :installation-code="installationCode" :set-up-code="setUpCode">
     <template #setup-description>
       Add the following line to the modules section of nuxt.config.{ts,js}
-    </template>
-    <template #setup>
-      <pre class="overflow-auto">modules: ['nuxt-icons']</pre>
     </template>
 
     <section class="mb-5">
