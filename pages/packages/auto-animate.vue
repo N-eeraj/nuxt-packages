@@ -1,4 +1,7 @@
 <script setup>
+const installationCode = `bun i @formkit/auto-animate`
+const setUpCode = `modules: ['@formkit/auto-animate/nuxt']`
+
 definePageMeta({
   name: 'Auto Animate',
   logo: 'auto-animate.svg',
@@ -8,18 +11,10 @@ definePageMeta({
 </script>
 
 <template>
-  <PackagesLayout>
-    <template #installation>
-      <pre class="overflow-auto">bun i @formkit/auto-animate</pre>
-    </template>
-
+  <PackagesLayout :installation-code="installationCode" :set-up-code="setUpCode">
     <template #setup-description>
       Add the following line to the modules section of nuxt.config.{ts,js}
     </template>
-    <template #setup>
-      <pre class="overflow-auto">modules: ['@formkit/auto-animate/nuxt']</pre>
-    </template>
-
     <PackagesDemoAutoAnimate />
   </PackagesLayout>
 </template>

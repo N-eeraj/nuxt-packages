@@ -19,6 +19,7 @@ export default defineNuxtConfig({
     'nuxt-marquee',
     '@nuxtjs/device',
     'nuxt-simple-sitemap',
+    "nuxt-shiki"
   ],
   veeValidate: {
     autoImports: true,
@@ -39,6 +40,18 @@ export default defineNuxtConfig({
         ital: [100]
       },
     }
+  },
+  shiki: {
+    theme: 'github-light',
+    lang: 'javascript',
+    themes: ['material-theme-palenight'],
+    langs: [
+      'vue',
+      'javascript',
+      'typescript',
+      'json',
+      'bash',
+    ],
   },
   runtimeConfig: {
     public: {
