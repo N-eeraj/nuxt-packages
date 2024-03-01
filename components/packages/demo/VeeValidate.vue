@@ -4,6 +4,7 @@ const isRequired = value => {
     return 'This field is required'
   return true
 }
+const { veeValidateDemo } = useDemoCode()
 </script>
 
 <template>
@@ -15,22 +16,7 @@ const isRequired = value => {
     </NuxtLink>
 
     <div class="flex gap-x-5 flex-wrap mb-4">
-      <BaseCodeSnippet file-name="Form.vue" class="flex-1 w-full md:w-5/12">
-        <pre>&lt;script setup&gt;
-const isRequired = value => {
-  if (!value?.trim())
-    return 'This field is required'
-  return true
-}
-&lt;/script&gt;
-
-&lt;template&gt;
-  &lt;VeeForm&gt;
-    &lt;VeeField name="field" placeholder="Enter value" :rules="isRequired" /&gt;
-    &lt;VeeErrorMessage name="field" /&gt;
-  &lt;/VeeForm&gt;
-&lt;/template&gt;</pre>
-      </BaseCodeSnippet>
+      <BaseCodeSnippet :code="veeValidateDemo" file-name="Form.vue" class="flex-1 w-full md:w-5/12" />
     </div>
 
     <VeeForm class="max-w-xs flex flex-col">

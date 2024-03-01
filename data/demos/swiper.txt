@@ -1,0 +1,13 @@
+<template>
+  <Swipe>
+    :modules="[ SwiperAutoplay ]"
+    :slides-per-view="1"
+    :loop="true"
+    :autoplay="{ delay: 2000 }">
+    <SwiperSlid>
+      v-for="index in 5"
+      :key="index">
+      {{ index }}
+    </SwiperSlide>
+  </Swiper>
+</template>

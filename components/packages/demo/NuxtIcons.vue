@@ -1,3 +1,7 @@
+<script setup>
+const { nuxtIconsDemo } = useDemoCode()
+</script>
+
 <template>
   <section>
     <NuxtLink to="#demo" class="package-subtitle">
@@ -6,12 +10,7 @@
       </h2>
     </NuxtLink>
 
-    <BaseCodeSnippet file-name="App.vue" class="w-full mb-4">
-        <pre class="overflow-auto">&lt;template&gt;
-  &lt;NuxtIcon name="home" /&gt;
-  &lt;NuxtIcon name="tech/html" filled /&gt;
-&lt;/template&gt;</pre>
-    </BaseCodeSnippet>
+    <BaseCodeSnippet :code="nuxtIconsDemo" file-name="Icons.vue" class="w-full mb-4" />
 
     <NuxtIcon name="home" class="inline-block text-white text-3xl" />
     <NuxtIcon name="tech/html" filled class="inline-block text-3xl" />

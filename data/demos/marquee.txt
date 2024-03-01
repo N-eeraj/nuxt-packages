@@ -1,0 +1,7 @@
+<template>
+  <NuxtMarquee :speed="240" pause-on-hover>
+    <div v-for="i of 5" :key="i">
+      {{ i }}
+    </div>
+  </NuxtMarquee>
+</template>

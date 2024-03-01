@@ -1,0 +1,4 @@
+<template>
+  <Icon name="uil:github" color="white" size="36" />
+  <Icon name="🚀" size="36" />
+</template>

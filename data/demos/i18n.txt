@@ -1,0 +1,18 @@
+<script setup>
+  const { locale } = useI18n()
+</script>
+
+<template>
+  <select v-model="locale">
+    <option value="en">
+      English
+    </option>
+    <option value="fr">
+      French
+    </option>
+  </select>
+
+  <p class="text-white">
+    {{ $t('welcome') }}
+  </p>
+</template>
