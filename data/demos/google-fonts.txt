@@ -1,0 +1,14 @@
+<template>
+  <p class="text-white font-['Montserrat']">
+    Montserrat
+  </p>
+  <p class="text-white font-['Lato'] font-thin">
+    Lato: 100
+  </p>
+  <p class="text-white font-['Lato'] font-black">
+    Lato: 900
+  </p>
+  <p class="text-white font-['Protest_Revolution'] italic">
+    Protest Revolution
+  </p>
+</template>

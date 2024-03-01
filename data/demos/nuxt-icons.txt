@@ -1,0 +1,4 @@
+<template>
+  <NuxtIcon name="home" />
+  <NuxtIcon name="tech/html" filled />
+</template>

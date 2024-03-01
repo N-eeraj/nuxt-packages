@@ -50,7 +50,7 @@ const copyCode = () => {
 <style scoped>
 .custom-shiki {
   :deep(pre) {
-    @apply min-h-12 p-3;
+    @apply max-w-full min-h-12 p-3 overflow-x-auto;
   }
 }
 </style>

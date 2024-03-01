@@ -1,3 +1,7 @@
+<script setup>
+const { nuxtIconDemo } = useDemoCode()
+</script>
+
 <template>
   <section>
     <NuxtLink to="#demo" class="package-subtitle">
@@ -6,12 +10,7 @@
       </h2>
     </NuxtLink>
 
-    <BaseCodeSnippet file-name="App.vue" class="w-full mb-4">
-        <pre class="overflow-auto">&lt;template&gt;
-  &lt;Icon name="uil:github" color="white" size="36" /&gt;
-  &lt;Icon name="🚀" size="36" /&gt;
-&lt;/template&gt;</pre>
-    </BaseCodeSnippet>
+    <BaseCodeSnippet :code="nuxtIconDemo" file-name="Icon.vue" class="w-full mb-4" />
 
     <p class="text-light">
       You can use any name from the

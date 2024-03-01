@@ -42,14 +42,11 @@ export default defineNuxtConfig({
     }
   },
   shiki: {
-    theme: 'github-light',
-    lang: 'javascript',
-    themes: ['material-theme-palenight'],
+    theme: 'material-theme-palenight',
     langs: [
       'vue',
-      'javascript',
-      'typescript',
-      'json',
+      'js',
+      'ts',
       'bash',
     ],
   },

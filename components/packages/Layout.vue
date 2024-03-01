@@ -39,7 +39,7 @@ const { meta } = useRoute()
   </section>
 
   <section class="mb-5">
-    <BaseCodeSnippet :code="setUpCode" lang="typescript">
+    <BaseCodeSnippet :code="setUpCode" lang="ts">
       <template #title>
         <NuxtLink to="#setup" class="package-subtitle">
           Setup

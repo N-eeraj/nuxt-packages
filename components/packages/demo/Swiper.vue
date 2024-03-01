@@ -1,3 +1,7 @@
+<script setup>
+const { swiperDemo } = useDemoCode()
+</script>
+
 <template>
   <section>
     <NuxtLink to="#demo" class="package-subtitle">
@@ -6,21 +10,7 @@
       </h2>
     </NuxtLink>
 
-    <BaseCodeSnippet file-name="Swiper.vue" class="mb-4">
-      <pre class="overflow-auto">&lt;template&gt;
-  &lt;Swipe&gt;
-    :modules="[ SwiperAutoplay ]"
-    :slides-per-view="1"
-    :loop="true"
-    :autoplay="{ delay: 2000 }"&gt;
-    &lt;SwiperSlid&gt;
-      v-for="index in 5"
-      :key="index"&gt;
-      &#123;&#123; index &#125;&#125;
-    &lt;/SwiperSlide&gt;
-  &lt;/Swiper&gt;
-&lt;/template&gt;</pre>
-    </BaseCodeSnippet>
+    <BaseCodeSnippet :code="swiperDemo" file-name="Swiper.vue" class="mb-4" />
 
     <Swiper
       :modules="[ SwiperAutoplay ]"
