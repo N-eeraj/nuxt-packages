@@ -1,0 +1,14 @@
+<script setup>
+const isRequired = value => {
+  if (!value?.trim())
+    return 'This field is required'
+  return true
+}
+</script>
+
+<template>
+  <VeeForm>
+    <VeeField name="field" placeholder="Enter value" :rules="isRequired" />
+    <VeeErrorMessage name="field" />
+  </VeeForm>
+</template>

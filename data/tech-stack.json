@@ -40,5 +40,11 @@
     "logo": "/images/logos/google-fonts.avif",
     "url": "https://google-fonts.nuxtjs.org/",
     "description": "Google Fonts module for Nuxt"
+  },
+  {
+    "name": "Shiki",
+    "logo": "/images/logos/shiki.svg",
+    "url": "https://shiki.matsu.io/",
+    "description": "A beautiful yet powerful syntax highlighter"
   }
 ]

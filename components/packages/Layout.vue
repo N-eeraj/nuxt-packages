@@ -1,4 +1,16 @@
 <script setup>
+defineProps({
+  installationCode: {
+    type: String,
+    required: false,
+    default: '',
+  },
+  setUpCode: {
+    type: String,
+    required: false,
+    default: '',
+  },
+})
 const { meta } = useRoute()
 </script>
 
@@ -17,18 +29,17 @@ const { meta } = useRoute()
   </div>
 
   <section class="mb-5">
-    <BaseCodeSnippet>
+    <BaseCodeSnippet :code="installationCode" lang="bash">
       <template #title>
         <NuxtLink to="#installation" class="package-subtitle">
           Installation
         </NuxtLink>
       </template>
-      <slot name="installation" />
     </BaseCodeSnippet>
   </section>
 
   <section class="mb-5">
-    <BaseCodeSnippet>
+    <BaseCodeSnippet :code="setUpCode" lang="ts">
       <template #title>
         <NuxtLink to="#setup" class="package-subtitle">
           Setup

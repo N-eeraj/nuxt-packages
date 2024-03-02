@@ -1,0 +1,5 @@
+<template>
+  <h1 class="p-4 bg-background-grey text-primary border border-primary rounded">
+    UnoCSS: Instant On-demand Atomic CSS Engine
+  </h1>
+</template>

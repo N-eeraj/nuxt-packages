@@ -11,3 +11,4 @@ This project demonstrates how to use different Nuxt modules.
 - [Nuxt Icon](https://nuxt.com/modules/icon)
 - [Auto Animate](https://auto-animate.formkit.com/)
 - [Google Fonts](https://google-fonts.nuxtjs.org/)
+- [Shiki](https://google-fonts.nuxtjs.org/)

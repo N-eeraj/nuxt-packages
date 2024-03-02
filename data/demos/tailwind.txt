@@ -1,0 +1,5 @@
+<template>
+  <h1 class="p-4 bg-tailwind-dark text-tailwind-primary border border-tailwind-primary rounded">
+    A utility-first CSS framework packed with classes.
+  </h1>
+</template>

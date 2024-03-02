@@ -15,6 +15,8 @@ const randomize = () => items.value.sort(() => Math.random() > 0.5 ? 1 : -1)
 const removeItem = item => items.value = items.value.filter(i => item !== i)
 
 setItems()
+
+const { autoAnimateDemo } = useDemoCode()
 </script>
 
 <template>
@@ -25,42 +27,7 @@ setItems()
       </h2>
     </NuxtLink>
     
-    <BaseCodeSnippet file-name="List.vue" class="mb-4">
-      <pre class="overflow-auto">&lt;script setup&gt;
-const items = ref([])
-
-const setItems = () => items.value = [
-  'React',
-  'Vue',
-  'Svelte',
-  'Angular',
-  'Next',
-  'Nuxt',
-  'SvelteKit',
-]
-
-const randomize = () => items.value.sort(() => Math.random() > 0.5 ? 1 : -1)
-const removeItem = item => items.value = items.value.filter(i => item !== i)
-
-setItems()
-&lt;/script&gt;
-
-&lt;template&gt;
-  &lt;template v-if="items.length"&gt;
-    &lt;ul v-auto-animate class="grid md:grid-cols-4 gap-4"&gt;
-      &lt;li v-for="item in items" class="p-2 bg-background text-primary border border-primary rounded cursor-pointer" :key="item" @click="removeItem(item)"&gt;
-        &#123;&#123; item &#125;&#125;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;button class="w-32 mt-4 p-2 bg-primary text-dark rounded cursor-pointer" @click="randomize"&gt;
-      Randomize
-    &lt;/button&gt;
-  &lt;/template&gt;
-  &lt;button v-else class="w-32 p-2 bg-primary text-dark rounded cursor-pointer" @click="setItems"&gt;
-    Reset
-  &lt;/button&gt;
-&lt;/template&gt;</pre>
-    </BaseCodeSnippet>
+    <BaseCodeSnippet :code="autoAnimateDemo" file-name="List.vue" class="mb-4" />
 
     <template v-if="items.length">
       <ul v-auto-animate class="grid md:grid-cols-4 gap-4">

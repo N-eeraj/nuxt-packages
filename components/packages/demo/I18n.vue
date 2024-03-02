@@ -1,5 +1,7 @@
 <script setup>
+import i18nConfig from '@/i18n.config?raw'
 const { locale } = useI18n()
+const { i18nDemo } = useDemoCode()
 </script>
 
 <template>
@@ -11,42 +13,8 @@ const { locale } = useI18n()
     </NuxtLink>
 
 <div class="flex gap-x-5 flex-wrap mb-4">
-  <BaseCodeSnippet file-name="i18n.config.ts" class="flex-1 w-full md:w-5/12">
-    <pre>export default defineI18nConfig(() => ({
-  legacy: false,
-  locale: 'en',
-  messages: {
-    en: {
-      welcome: 'Welcome'
-    },
-    fr: {
-      welcome: 'Bienvenue'
-    }
-  }
-}))
-</pre>
-  </BaseCodeSnippet>
-
-  <BaseCodeSnippet file-name="Heading.vue" class="flex-1 w-full md:w-5/12">
-    <pre class="overflow-auto">&lt;script setup&gt;
-  const { locale } = useI18n()
-&lt;/script&gt;
-
-&lt;template&gt;
-  &lt;select v-model="locale"&gt;
-    &lt;option value="en"&gt;
-      English
-    &lt;/option&gt;
-    &lt;option value="fr"&gt;
-      French
-    &lt;/option&gt;
-  &lt;/select&gt;
-
-  &lt;p class="text-white"&gt;
-    {{ $t('welcome') }}
-  &lt;/p&gt;
-&lt;/template&gt;</pre>
-  </BaseCodeSnippet>
+  <BaseCodeSnippet :code="i18nConfig" lang="ts" file-name="i18n.config.ts" class="flex-1 w-full md:w-5/12" />
+  <BaseCodeSnippet :code="i18nDemo" file-name="Heading.vue" class="flex-1 w-full md:w-5/12" />
 </div>
 
     <select v-model="locale">

@@ -1,4 +1,7 @@
 <script setup>
+const installationCode = `bun i nuxt-swiper`
+const setUpCode = `modules: ['nuxt-swiper']`
+
 definePageMeta({
   name: 'Swiper',
   logo: 'swiper.svg',
@@ -8,18 +11,10 @@ definePageMeta({
 </script>
 
 <template>
-  <PackagesLayout>
-    <template #installation>
-      <pre class="overflow-auto">bun i nuxt-swiper</pre>
-    </template>
-
+  <PackagesLayout :installation-code="installationCode" :set-up-code="setUpCode">
     <template #setup-description>
       Add the following line to the modules section of nuxt.config.{ts,js}
     </template>
-    <template #setup>
-      <pre class="overflow-auto">modules: ['nuxt-swiper']</pre>
-    </template>
-
     <PackagesDemoSwiper />
   </PackagesLayout>
 </template>

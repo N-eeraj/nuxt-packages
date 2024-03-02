@@ -1,8 +1,17 @@
 <script setup>
-defineProps({
+const props = defineProps({
+  code: {
+    type: String,
+    required: true,
+  },
   fileName: {
     type: String,
     required: false,
+  },
+  lang: {
+    type: String,
+    required: false,
+    default: 'vue',
   },
 })
 
@@ -10,10 +19,9 @@ const { setToast } = useToastStore()
 
 const copyIcon = ref('ph:copy')
 
-const code = ref(null)
 const copyCode = () => {
   copyIcon.value = 'ph:check-square-duotone'
-  navigator.clipboard.writeText(code.value.innerText)
+  navigator.clipboard.writeText(props.code)
   setToast(true, 'Copied to clipboard')
   setTimeout(() => {
     copyIcon.value = 'ph:copy'
@@ -29,14 +37,20 @@ const copyCode = () => {
     <p class="text-light-extra">
       <slot name="description" />
     </p>
-    <div class="relative flex flex-col min-w-50 bg-bluegray-800 border border-light-extra/25 rounded-md overflow-hidden">
+    <div class="relative flex flex-col min-w-50 rounded-md overflow-hidden">
       <code v-if="fileName" class="w-full p-3 bg-background-grey text-light text-sm">
         {{ fileName }}
       </code>
-      <code ref="code" class="block min-h-12 max-h-72 p-3 text-light text-sm overflow-y-auto">
-        <slot />
-      </code>
+      <Shiki :code="code || ''" :lang="lang" theme="material-theme-palenight" class="custom-shiki block max-h-72 overflow-y-auto" />
       <Icon :name="copyIcon" class="absolute top-4 right-4 text-light cursor-pointer" @click="copyCode" />
     </div>
   </section>
 </template>
+
+<style scoped>
+.custom-shiki {
+  :deep(pre) {
+    @apply max-w-full min-h-12 p-3 overflow-x-auto;
+  }
+}
+</style>

@@ -22,6 +22,7 @@
     "nuxt-headlessui": "^1.1.5",
     "nuxt-icon": "^0.6.8",
     "nuxt-marquee": "^1.0.2",
+    "nuxt-shiki": "latest",
     "nuxt-simple-sitemap": "latest",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5"

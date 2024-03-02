@@ -1,4 +1,7 @@
 <script setup>
+const installationCode = `bun i @nuxtjs/tailwindcss`
+const setUpCode = `modules: ['@nuxtjs/tailwindcss']`
+
 definePageMeta({
   name: 'Tailwind CSS',
   logo: 'tailwindcss.svg',
@@ -8,18 +11,10 @@ definePageMeta({
 </script>
 
 <template>
-  <PackagesLayout>
-    <template #installation>
-      <pre class="overflow-auto">bun i @nuxtjs/tailwindcss</pre>
-    </template>
-
+  <PackagesLayout :installation-code="installationCode" :set-up-code="setUpCode">
     <template #setup-description>
       Add the following line to the modules section of nuxt.config.{ts,js}
     </template>
-    <template #setup>
-      <pre class="overflow-auto">modules: ['@nuxtjs/tailwindcss']</pre>
-    </template>
-
     <PackagesDemoTailwind />
   </PackagesLayout>
 </template>

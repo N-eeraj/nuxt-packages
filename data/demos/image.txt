@@ -1,0 +1,3 @@
+<template>
+  <NuxtImg format="webp" src="/images/nuxt-image-demo.jpg" width="128" quality="50" />
+</template>

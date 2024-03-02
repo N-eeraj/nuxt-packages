@@ -1,4 +1,7 @@
 <script setup>
+const installationCode = `bun i -D @nuxtjs/color-mode`
+const setUpCode = `modules: ['@nuxtjs/color-mode']`
+
 definePageMeta({
   name: 'Color Mode',
   logo: 'color-mode.avif',
@@ -8,18 +11,10 @@ definePageMeta({
 </script>
 
 <template>
-  <PackagesLayout>
-    <template #installation>
-      <pre class="overflow-auto">bun i -D @nuxtjs/color-mode</pre>
-    </template>
-
+  <PackagesLayout :installation-code="installationCode" :set-up-code="setUpCode">
     <template #setup-description>
       Add the following lines to nuxt.config.{ts,js}
     </template>
-    <template #setup>
-      <pre class="overflow-auto">modules: ['@nuxtjs/color-mode']</pre>
-    </template>
-
     <PackagesDemoColorMode />
   </PackagesLayout>
 </template>

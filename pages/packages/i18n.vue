@@ -1,4 +1,7 @@
 <script setup>
+const installationCode = `bun i @nuxtjs/i18n --save-dev`
+const setUpCode = `modules: ['@nuxtjs/i18n']`
+
 definePageMeta({
   name: 'i18n',
   logo: 'i18n.avif',
@@ -8,18 +11,10 @@ definePageMeta({
 </script>
 
 <template>
-  <PackagesLayout>
-    <template #installation>
-      <pre class="overflow-auto">bun i @nuxtjs/i18n --save-dev</pre>
-    </template>
-
+  <PackagesLayout :installation-code="installationCode" :set-up-code="setUpCode">
     <template #setup-description>
       Add the following line to the modules section of nuxt.config.{ts,js}
     </template>
-    <template #setup>
-      <pre class="overflow-auto">modules: ['@nuxtjs/i18n']</pre>
-    </template>
-
     <PackagesDemoI18n />
   </PackagesLayout>
 </template>
