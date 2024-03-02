@@ -1,0 +1,7 @@
+<script setup>
+import { useToggle } from '@vueuse/core'
+const [refVal, toggleValue] = useToggle()
+console.log(refVal.value) // false
+toggleValue()
+console.log(refVal.value) // true
+</script>

@@ -7,6 +7,8 @@ definePageMeta({
   name: 'useFetch',
   category: 'Network',
 })
+
+const { vueUseDemos } = useDemoCode()
 </script>
 
 <template>
@@ -14,22 +16,7 @@ definePageMeta({
     useFetch
   </h1>
 
-  <BaseCodeSnippet file-name="useFetch.vue" class="w-fit">
-    <pre class="overflow-auto">&lt;script setup&gt;
-  import { useFetch } from '@vueuse/core'
-  const { data, isFetching } = useFetch('https://pokeapi.co/api/v2/pokemon/pikachu')
-  const name = computed(() => JSON.parse(data.value)?.name)
-&lt;/script &gt;
-
-&lt;template&gt;
-  &lt;span v-if="isFetching"&gt;
-    Loading Data...
-  &lt;/span&gt;
-  &lt;span v-else&gt;
-    &#123;&#123; name &#125;&#125;
-  &lt;/span&gt;
-&lt;template&gt;</pre>
-  </BaseCodeSnippet>
+  <BaseCodeSnippet :code="vueUseDemos.network.useFetch" file-name="useFetch.vue" class="w-fit" />
 
   <span v-if="isFetching" class="text-white">
     Loading Data...

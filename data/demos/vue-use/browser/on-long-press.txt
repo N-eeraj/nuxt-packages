@@ -1,0 +1,20 @@
+<script setup>
+  import { onLongPress } from '@vueuse/core'
+  const btnRef = ref(null)
+  const longPressed = ref(false)
+  onLongPress(btnRef, () => longPressed.value = true, { delay: 1000 })
+</script>
+
+<template>
+  <span>
+    Long Pressed:
+    {{ longPressed }}
+  </span>
+
+  <button ref="btnRef">
+    Press long
+  </button>
+  <button v-if="longPressed" @click="longPressed=false">
+    Reset
+  </button>
+</template>

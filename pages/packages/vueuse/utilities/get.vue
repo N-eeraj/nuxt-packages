@@ -7,6 +7,8 @@ definePageMeta({
   name: 'get',
   category: 'Utilities',
 })
+
+const { vueUseDemos } = useDemoCode()
 </script>
 
 <template>
@@ -14,11 +16,5 @@ definePageMeta({
     get
   </h1>
 
-  <BaseCodeSnippet file-name="get.vue" class="w-fit">
-    <pre class="overflow-auto">&lt;script setup&gt;
-  import { get } from '@vueuse/core'
-  const refVal = ref('test')
-  console.log(get(refVal))
-&lt;/script&gt;</pre>
-  </BaseCodeSnippet>
+  <BaseCodeSnippet :code="vueUseDemos.utilities.get" file-name="get.vue" class="w-fit" />
 </template>

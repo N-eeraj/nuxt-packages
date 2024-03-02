@@ -1,14 +1,16 @@
 <script setup>
 import { set } from '@vueuse/core'
-const refVal = ref('')
+const refVal = ref('before')
 console.log(refVal.value)
-set(refVal, 'test')
+set(refVal, 'after')
 console.log(refVal.value)
 
 definePageMeta({
   name: 'set',
   category: 'Utilities',
 })
+
+const { vueUseDemos } = useDemoCode()
 </script>
 
 <template>
@@ -16,13 +18,5 @@ definePageMeta({
     set
   </h1>
 
-  <BaseCodeSnippet file-name="set.vue" class="w-fit">
-    <pre class="overflow-auto">&lt;script setup&gt;
-  import { set } from '@vueuse/core'
-  const refVal = ref('')
-  console.log(refVal)
-  set(refVal, 'test')
-  console.log(refVal)
-&lt;/script&gt;</pre>
-  </BaseCodeSnippet>
+  <BaseCodeSnippet :code="vueUseDemos.utilities.set" file-name="set.vue" class="w-fit" />
 </template>

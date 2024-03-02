@@ -1,0 +1,14 @@
+<script setup>
+  import { useFetch } from '@vueuse/core'
+  const { data, isFetching } = useFetch('https://pokeapi.co/api/v2/pokemon/pikachu')
+  const name = computed(() => JSON.parse(data.value)?.name)
+</script >
+
+<template>
+  <span v-if="isFetching">
+    Loading Data...
+  </span>
+  <span v-else>
+    {{ name }}
+  </span>
+<template>

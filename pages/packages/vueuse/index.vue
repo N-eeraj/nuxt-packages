@@ -1,4 +1,7 @@
 <script setup>
+const installationCode = `bun i @vueuse/nuxt`
+const setUpCode = `modules: ['@vueuse/nuxt']`
+
 definePageMeta({
   name: 'VueUse',
   logo: 'vueuse.svg',
@@ -8,18 +11,10 @@ definePageMeta({
 </script>
 
 <template>
-  <PackagesLayout>
-    <template #installation>
-      <pre class="overflow-auto">bun i @vueuse/nuxt</pre>
-    </template>
-
+  <PackagesLayout :installation-code="installationCode" :set-up-code="setUpCode">
     <template #setup-description>
       Add the following line to the modules section of nuxt.config.{ts,js}
     </template>
-    <template #setup>
-      <pre class="overflow-auto">modules: ['@vueuse/nuxt']</pre>
-    </template>
-
     <PackagesDemoVueUse />
   </PackagesLayout>
 </template>

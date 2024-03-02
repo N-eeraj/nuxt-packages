@@ -9,6 +9,8 @@ definePageMeta({
   name: 'useToggle',
   category: 'Utilities',
 })
+
+const { vueUseDemos } = useDemoCode()
 </script>
 
 <template>
@@ -16,13 +18,5 @@ definePageMeta({
     useToggle
   </h1>
 
-  <BaseCodeSnippet file-name="toggle.vue" class="w-fit">
-    <pre class="overflow-auto">&lt;script setup&gt;
-  import { useToggle } from '@vueuse/core'
-  const [refVal, toggleValue] = useToggle()
-  console.log(refVal.value)
-  toggleValue()
-  console.log(refVal.value)
-&lt;/script&gt;</pre>
-  </BaseCodeSnippet>
+  <BaseCodeSnippet :code="vueUseDemos.utilities.useToggle" file-name="toggle.vue" class="w-fit" />
 </template>

@@ -6,6 +6,8 @@ definePageMeta({
   name: 'useDateFormat',
   category: 'Time',
 })
+
+const { vueUseDemos } = useDemoCode()
 </script>
 
 <template>
@@ -13,18 +15,7 @@ definePageMeta({
     useClipboard    
   </h1>
 
-  <BaseCodeSnippet file-name="Clipboard.vue" class="w-fit">
-    <pre class="overflow-auto">&lt;script setup&gt;
-  import { useDateFormat, useNow } from '@vueuse/core'
-  const dateTime = useDateFormat(useNow(), 'dddd, MMM Do YYYY hh:mm:ss A')
-&lt;/script&gt;
-
-&lt;template&gt;
-  &lt;span&gt;
-    &#123;&#123; dateTime &#125;&#125;
-  &lt;/span&gt;
-&lt;/template&gt;</pre>
-  </BaseCodeSnippet>
+  <BaseCodeSnippet :code="vueUseDemos.time.useDateFormat" file-name="Clipboard.vue" class="w-fit" />
 
   <span class="text-primary">
     {{ dateTime }}

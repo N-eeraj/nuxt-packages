@@ -1,10 +1,13 @@
 <script setup>
+import store from '@/stores/vueUse.js?raw'
 const count = useVueUseStore()
 
 definePageMeta({
   name: 'createGlobalState',
   category: 'State',
 })
+
+const { vueUseDemos } = useDemoCode()
 </script>
 
 <template>
@@ -13,29 +16,8 @@ definePageMeta({
   </h1>
 
   <div class="flex gap-x-5 flex-wrap">
-    <BaseCodeSnippet file-name="store.js" class="flex-1 w-full md:w-5/12">
-      <pre class="overflow-auto">import { createGlobalState, useStorage } from '@vueuse/core'
-
-export const useVueUseStore = createGlobalState(() => useStorage('vueuse-local-storage-counter', 0))</pre>
-    </BaseCodeSnippet>
-
-    <BaseCodeSnippet file-name="Counter.vue" class="flex-1 w-full md:w-5/12">
-      <pre class="overflow-auto">&lt;script setup&gt;
-const count = useVueUseStore()
-&lt;/script&gt;
-
-&lt;template&gt;
-  &lt;div&gt;
-    &lt;button @click="count++"&gt;
-      Count is:
-      &#123;&#123; count &#125;&#125;
-    &lt;/button&gt;
-    &lt;button v-if="count" @click="count=0"&gt;
-      Reset
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/template&gt;</pre>
-    </BaseCodeSnippet>
+    <BaseCodeSnippet :code="store" lang="js" file-name="store.js" class="flex-1 w-full md:w-5/12" />
+    <BaseCodeSnippet :code="vueUseDemos.state.createGlobalState" file-name="Counter.vue" class="flex-1 w-full md:w-5/12" />
   </div>
 
   <div class="flex gap-x-1">

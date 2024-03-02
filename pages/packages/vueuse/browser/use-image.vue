@@ -14,6 +14,8 @@ definePageMeta({
   name: 'useImage',
   category: 'Browser',
 })
+
+const { vueUseDemos } = useDemoCode()
 </script>
 
 <template>
@@ -21,40 +23,7 @@ definePageMeta({
     useImage    
   </h1>
 
-  <BaseCodeSnippet file-name="image.vue" class="mb-4">
-    <pre class="overflow-auto">&lt;script setup&gt;
-import { useImage } from '@vueuse/core'
-import { ref } from 'vue'
-
-const imageOptions = ref({ src: 'https://place-hold.it/300x200/' })
-const { isLoading, error } = useImage(imageOptions, { delay: 1000 })
-
-const change = () => {
-  imageOptions.value.src = ''
-  imageOptions.value.src = 'https://place-hold.it/300x200/'
-}
-&lt;/script&gt;
-
-&lt;template&gt;
-  &lt;div v-if="isLoading"&gt;
-    Loading...
-  &lt;/div&gt;
-  &lt;div v-else-if="error"&gt;
-    Failed
-  &lt;/div&gt;
-  &lt;img v-else :src="imageOptions.src"&gt;
-
-  &lt;div&gt;
-    &lt;button v-if="!isLoading" @click="change"&gt;
-      Change
-    &lt;/button&gt;
-    
-    &lt;button v-if="!isLoading" @click="imageOptions.src = ''"&gt;
-      Create Error
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/template&gt;</pre>
-  </BaseCodeSnippet>
+  <BaseCodeSnippet :code="vueUseDemos.browser.useImage" file-name="image.vue" class="mb-4" />
 
   <div v-if="isLoading" class="w-75 h-50 p-2 animate-pulse bg-primary/25 text-white">
     Loading...

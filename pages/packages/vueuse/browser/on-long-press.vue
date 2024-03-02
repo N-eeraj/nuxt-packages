@@ -8,6 +8,8 @@ definePageMeta({
   name: 'onLongPress',
   category: 'Browser',
 })
+
+const { vueUseDemos } = useDemoCode()
 </script>
 
 <template>
@@ -15,28 +17,7 @@ definePageMeta({
     onLongPress    
   </h1>
 
-  <BaseCodeSnippet file-name="LongPress.vue" class="w-fit">
-    <pre class="overflow-auto">&lt;script setup&gt;
-  import { onLongPress } from '@vueuse/core'
-  const btnRef = ref(null)
-  const longPressed = ref(false)
-  onLongPress(btnRef, () => longPressed.value = true, { delay: 1000 })
-&lt;/script&gt;
-
-&lt;template&gt;
-  &lt;span&gt;
-    Long Pressed:
-    &#123;&#123; longPressed &#125;&#125;
-  &lt;/span&gt;
-
-  &lt;button ref="btnRef"&gt;
-    Press long
-  &lt;/button&gt;
-  &lt;button v-if="longPressed" @click="longPressed=false"&gt;
-    Reset
-  &lt;/button&gt;
-&lt;/template&gt;</pre>
-  </BaseCodeSnippet>
+  <BaseCodeSnippet :code="vueUseDemos.browser.onLongPress" file-name="LongPress.vue" class="w-fit" />
 
   <div class="flex flex-col gap-y-4 mt-4">
     <span class="text-white">

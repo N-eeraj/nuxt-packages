@@ -1,0 +1,23 @@
+<script setup>
+  const source = ref('Hello')
+  const { text, copy, copied, isSupported } = useClipboard({ source })
+</script>
+
+<template>
+  <div v-if="isSupported">
+    <input v-model="source" type="text" />
+    <p >
+      Current copied:
+      <code>
+        {{ text || 'none' }}
+      </code>
+    </p>
+    <button @click="copy(source)">
+      <span v-if="!copied">Copy</span>
+      <span v-else>Copied!</span>
+    </button>
+  </div>
+  <p v-else>
+    Your browser does not support Clipboard API
+  </p>
+</template>

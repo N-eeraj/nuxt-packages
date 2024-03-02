@@ -1,0 +1,5 @@
+<script setup>
+  import { get } from '@vueuse/core'
+  const refVal = ref('test')
+  console.log(get(refVal)) // 'test'
+</script>

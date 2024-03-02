@@ -1,0 +1,8 @@
+<script setup>
+import { useCloned } from '@vueuse/core'
+const original = ref({ key: 'value' })
+const { cloned } = useCloned(original)
+original.value.key = 'some new value'
+console.log(original.value.key) // 'some new value'
+console.log(cloned.value.key) // 'value'
+</script>

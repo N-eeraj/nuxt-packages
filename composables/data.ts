@@ -17,6 +17,17 @@ import swiperDemo from '@/data/demos/swiper.txt?raw'
 import tailwindDemo from '@/data/demos/tailwind.txt?raw'
 import unoCSSDemo from '@/data/demos/uno-css.txt?raw'
 import veeValidateDemo from '@/data/demos/vee-validate.txt?raw'
+import vueUseOnLongPressDemo from '@/data/demos/vue-use/browser/on-long-press.txt?raw'
+import vueUseUseClipboardDemo from '@/data/demos/vue-use/browser/use-clipboard.txt?raw'
+import vueUseImageDemo from '@/data/demos/vue-use/browser/use-image.txt?raw'
+import vueUseFetchDemo from '@/data/demos/vue-use/network/use-fetch.txt?raw'
+import vueUseCreateGlobalStateDemo from '@/data/demos/vue-use/state/create-global-state.txt?raw'
+import vueUseUseDateFormatDemo from '@/data/demos/vue-use/time/use-date-format.txt?raw'
+import vueUseUseTimeAgoDemo from '@/data/demos/vue-use/time/use-time-ago.txt?raw'
+import vueUseGetDemo from '@/data/demos/vue-use/utilities/get.txt?raw'
+import vueUseSetDemo from '@/data/demos/vue-use/utilities/set.txt?raw'
+import vueUseUseClonedDemo from '@/data/demos/vue-use/utilities/use-cloned.txt?raw'
+import vueUseUseToggleDemo from '@/data/demos/vue-use/utilities/use-toggle.txt?raw'
 
 const useDemoCode = () => {
   return {
@@ -35,6 +46,29 @@ const useDemoCode = () => {
     tailwindDemo,
     unoCSSDemo,
     veeValidateDemo,
+    vueUseDemos: {
+      browser: {
+        onLongPress: vueUseOnLongPressDemo,
+        useClipboard: vueUseUseClipboardDemo,
+        useImage: vueUseImageDemo,
+      },
+      network: {
+        useFetch: vueUseFetchDemo,
+      },
+      state: {
+        createGlobalState: vueUseCreateGlobalStateDemo,
+      },
+      time: {
+        useDateFormat: vueUseUseDateFormatDemo,
+        useTimeAgo: vueUseUseTimeAgoDemo,
+      },
+      utilities: {
+        get: vueUseGetDemo,
+        set: vueUseSetDemo,
+        useCloned: vueUseUseClonedDemo,
+        useToggle: vueUseUseToggleDemo,
+      },
+    },
   }
 }
 
