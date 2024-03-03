@@ -1,4 +1,4 @@
-import siteDescription from '/data/description.txt?raw'
+import siteDescription from '/data/descriptions/index.txt?raw'
 
 interface MetaObject {
   pageTitle?: string
@@ -7,7 +7,7 @@ interface MetaObject {
   pageImage?: string
 }
 
-const useMeta = ({ pageTitle, pageDescription, pageKeywords, pageImage }: MetaObject) => {
+const useMeta = ({ pageTitle, pageDescription, pageKeywords, pageImage }: MetaObject = {}) => {
   const runtimeConfig = useRuntimeConfig()
 
   const siteName = runtimeConfig.public.siteName

@@ -1,7 +1,13 @@
 <script setup>
+import pageDescription from '/data/descriptions/about.txt?raw'
 definePageMeta({
   name: 'About',
   icon: 'ph:info-duotone',
+})
+
+useMeta({
+  pageTitle: 'Nuxt Packages: About',
+  pageDescription,
 })
 </script>
 
