@@ -1,4 +1,6 @@
 <script setup>
+import pageDescription from '/data/descriptions/packages.txt?raw'
+
 const route = useRoute()
 const { options } = useRouter()
 
@@ -17,10 +19,14 @@ const filteredCategory = computed(() => route.query.category)
 const filteredPackages = computed(() => packages.value.filter(({ category }) => filteredCategory.value === category))
 
 const packagesList = computed(() => (filteredCategory.value ? filteredPackages.value : packages.value).filter(({ name }) => name.toLowerCase().includes(route.query.q?.toLowerCase() || '')))
-
 definePageMeta({
   name: 'All Packages',
   icon: 'ph:package-duotone',
+})
+
+useMeta({
+  pageTitle: 'Nuxt Packages: Packages',
+  pageDescription,
 })
 </script>
 

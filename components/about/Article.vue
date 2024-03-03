@@ -1,7 +1,7 @@
 <template>
   <article class="flex flex-col gap-y-3 text-light-extra leading-7">
     <p>
-      Welcome to our webpage all about Nuxt.js and its incredible libraries and modules! 🚀
+      Welcome to our website all about Nuxt.js and its incredible libraries and modules! 🚀
     </p>
     <p>
       Nuxt.js is a powerful framework built on top of Vue.js, designed to make the development of universal
