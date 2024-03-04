@@ -12,6 +12,12 @@ defineProps({
   },
 })
 const { meta } = useRoute()
+
+useMeta({
+  pageTitle: `${meta.name} | Nuxt Packages`,
+  pageDescription: meta.description,
+  pageImage: `/images/logos/${meta.logo}`,
+})
 </script>
 
 <template>
