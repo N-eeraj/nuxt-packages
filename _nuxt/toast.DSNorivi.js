@@ -1,0 +1,1 @@
+import{d as r}from"./entry.BBVaCfD-.js";import{a as s}from"./swiper-vue.BUXlJbNq.js";const f=r("toast",()=>{const t=s(!1),o=s(null);return{showToast:t,textToast:o,setToast:(e,a=null)=>{t.value=e,o.value=a}}});export{f as u};

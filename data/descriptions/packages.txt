@@ -1,0 +1,2 @@
+Explore and discover various Nuxt.js libraries that perfectly suit your project's needs!
+Find your desired library among the "Extensions", "Fonts", "Images", "Libraries", "UI" categories.
