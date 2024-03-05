@@ -1,7 +1,5 @@
 <script setup>
-useMeta({
-  // title: 'Nuxt Packages',
-})
+useMeta()
 </script>
 
 <template>

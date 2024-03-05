@@ -19,8 +19,8 @@ export default defineNuxtConfig({
     '@nuxtjs/device',
     'nuxt-marquee',
     '@nuxtjs/device',
+    "nuxt-shiki",
     'nuxt-simple-sitemap',
-    "nuxt-shiki"
   ],
   veeValidate: {
     autoImports: true,
