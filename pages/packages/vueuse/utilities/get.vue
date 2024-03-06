@@ -12,9 +12,10 @@ const { vueUseDemos } = useDemoCode()
 </script>
 
 <template>
-  <h1 class="text-white text-2xl">
-    get
-  </h1>
-
-  <BaseCodeSnippet :code="vueUseDemos.utilities.get" file-name="get.vue" class="w-fit" />
+  <PackagesDemoVueUseLayout name="get">
+    <template #description>
+      Shorthand for accessing ref.value
+    </template>
+    <BaseCodeSnippet :code="vueUseDemos.utilities.get" file-name="get.vue" class="w-fit" />
+  </PackagesDemoVueUseLayout>
 </template>

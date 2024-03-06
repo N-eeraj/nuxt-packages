@@ -14,9 +14,10 @@ const { vueUseDemos } = useDemoCode()
 </script>
 
 <template>
-  <h1 class="text-white text-2xl">
-    useToggle
-  </h1>
-
-  <BaseCodeSnippet :code="vueUseDemos.utilities.useToggle" file-name="toggle.vue" class="w-fit" />
+  <PackagesDemoVueUseLayout name="useToggle">
+    <template #description>
+      A boolean switcher with utility functions.
+    </template>
+    <BaseCodeSnippet :code="vueUseDemos.utilities.useToggle" file-name="toggle.vue" class="w-fit" />
+  </PackagesDemoVueUseLayout>
 </template>

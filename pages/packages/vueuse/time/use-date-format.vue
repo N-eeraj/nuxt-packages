@@ -11,13 +11,18 @@ const { vueUseDemos } = useDemoCode()
 </script>
 
 <template>
-  <h1 class="text-white text-2xl">
-    useClipboard    
-  </h1>
+  <PackagesDemoVueUseLayout name="useDateFormat">
+    <template #description>
+      Get the formatted date according to the string of tokens passed in, inspired by
+      <NuxtLink to="https://github.com/iamkun/dayjs" target="_blank" rel="nofollow" class="text-primary underline">
+        dayjs
+      </NuxtLink>.
+    </template>
 
-  <BaseCodeSnippet :code="vueUseDemos.time.useDateFormat" file-name="Clipboard.vue" class="w-fit" />
+    <BaseCodeSnippet :code="vueUseDemos.time.useDateFormat" file-name="Clipboard.vue" class="w-fit" />
 
-  <span class="text-primary">
-    {{ dateTime }}
-  </span>
+    <span class="text-primary">
+      {{ dateTime }}
+    </span>
+  </PackagesDemoVueUseLayout>
 </template>

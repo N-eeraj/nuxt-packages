@@ -15,9 +15,10 @@ const { vueUseDemos } = useDemoCode()
 </script>
 
 <template>
-  <h1 class="text-white text-2xl">
-    useCloned
-  </h1>
-
-  <BaseCodeSnippet :code="vueUseDemos.utilities.useCloned" file-name="clone.vue" class="w-fit" />
+  <PackagesDemoVueUseLayout name="useCloned">
+    <template #description>
+      Reactive clone of a ref. By default, it use JSON.parse(JSON.stringify()) to do the clone.
+    </template>
+    <BaseCodeSnippet :code="vueUseDemos.utilities.useCloned" file-name="clone.vue" class="w-fit" />
+  </PackagesDemoVueUseLayout>
 </template>

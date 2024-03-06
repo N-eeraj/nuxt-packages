@@ -28,7 +28,7 @@ const useMeta = ({ pageTitle, pageDescription, pageKeywords, pageImage }: MetaOb
       { name: 'og:image', content: pageImage || nuxtIcon },
       { hid: 'og-image', property: 'og:image', content: pageImage || nuxtIcon },
       { name: 'twitterCard', content: 'summary_large_image' },
-      { name: 'keywords', content: pageKeywords || siteDescription },
+      { name: 'keywords', content: pageKeywords || pageDescription || siteDescription },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     ],
     link: [

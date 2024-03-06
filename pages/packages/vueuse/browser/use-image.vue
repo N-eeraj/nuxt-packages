@@ -19,27 +19,29 @@ const { vueUseDemos } = useDemoCode()
 </script>
 
 <template>
-  <h1 class="text-white text-2xl">
-    useImage    
-  </h1>
+  <PackagesDemoVueUseLayout name="useImage">
+    <template #description>
+      Reactive load an image in the browser, you can wait the result to display it or show a fallback.
+    </template>
 
-  <BaseCodeSnippet :code="vueUseDemos.browser.useImage" file-name="image.vue" class="mb-4" />
+    <BaseCodeSnippet :code="vueUseDemos.browser.useImage" file-name="image.vue" class="mb-4" />
 
-  <div v-if="isLoading" class="w-75 h-50 p-2 animate-pulse bg-primary/25 text-white">
-    Loading...
-  </div>
-  <div v-else-if="error" class="text-red">
-    Failed
-  </div>
-  <img v-else :src="imageOptions.src" class="w-75 h-50">
+    <div v-if="isLoading" class="w-75 h-50 p-2 animate-pulse bg-primary/25 text-white">
+      Loading...
+    </div>
+    <div v-else-if="error" class="text-red">
+      Failed
+    </div>
+    <img v-else :src="imageOptions.src" class="w-75 h-50">
 
-  <div class="flex gap-x-2 mt-4">
-    <button v-if="!isLoading" class="w-32 p-2 bg-primary hover:bg-primary/75 text-background rounded" @click="change">
-      Change
-    </button>
-    
-    <button v-if="!isLoading" class="w-32 p-2 text-primary border border-primary hover:border-primary/75 rounded" @click="imageOptions.src = ''">
-      Create Error
-    </button>
-  </div>
+    <div class="flex gap-x-2 mt-4">
+      <button v-if="!isLoading" class="w-32 p-2 bg-primary hover:bg-primary/75 text-background rounded" @click="change">
+        Change
+      </button>
+      
+      <button v-if="!isLoading" class="w-32 p-2 text-primary border border-primary hover:border-primary/75 rounded" @click="imageOptions.src = ''">
+        Create Error
+      </button>
+    </div>
+  </PackagesDemoVueUseLayout>
 </template>

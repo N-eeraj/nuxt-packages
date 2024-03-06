@@ -12,17 +12,19 @@ const { vueUseDemos } = useDemoCode()
 </script>
 
 <template>
-  <h1 class="text-white text-2xl">
-    useTimeAgo    
-  </h1>
+  <PackagesDemoVueUseLayout name="useTimeAgo">
+    <template #description>
+      Reactive time ago. Automatically update the time ago string when the time changes.
+    </template>
 
-  <BaseCodeSnippet :code="vueUseDemos.time.useTimeAgo" file-name="TimeAgo.vue" class="w-fit" />
+    <BaseCodeSnippet :code="vueUseDemos.time.useTimeAgo" file-name="TimeAgo.vue" class="w-fit" />
 
-  <div class="text-white">
-    <strong class="text-primary">
-      {{ timeAgo }}
-    </strong>
-    since
-    {{ date.toLocaleDateString() }}
-  </div>
+    <div class="text-white">
+      <strong class="text-primary">
+        {{ timeAgo }}
+      </strong>
+      since
+      {{ date.toLocaleDateString() }}
+    </div>
+  </PackagesDemoVueUseLayout>
 </template>
