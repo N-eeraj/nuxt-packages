@@ -20,7 +20,8 @@ import veeValidateDemo from '@/data/demos/vee-validate.txt?raw'
 import vueUseOnLongPressDemo from '@/data/demos/vue-use/browser/on-long-press.txt?raw'
 import vueUseUseClipboardDemo from '@/data/demos/vue-use/browser/use-clipboard.txt?raw'
 import vueUseImageDemo from '@/data/demos/vue-use/browser/use-image.txt?raw'
-import vueUseFetchDemo from '@/data/demos/vue-use/network/use-fetch.txt?raw'
+import vueUseUseDocumentVisibilityDemo from '@/data/demos/vue-use/elements/use-document-visibility.txt?raw'
+import vueUseUseFetchDemo from '@/data/demos/vue-use/network/use-fetch.txt?raw'
 import vueUseCreateGlobalStateDemo from '@/data/demos/vue-use/state/create-global-state.txt?raw'
 import vueUseUseDateFormatDemo from '@/data/demos/vue-use/time/use-date-format.txt?raw'
 import vueUseUseTimeAgoDemo from '@/data/demos/vue-use/time/use-time-ago.txt?raw'
@@ -52,8 +53,11 @@ const useDemoCode = () => {
         useClipboard: vueUseUseClipboardDemo,
         useImage: vueUseImageDemo,
       },
+      elements: {
+        useDocumentVisibility: vueUseUseDocumentVisibilityDemo
+      },
       network: {
-        useFetch: vueUseFetchDemo,
+        useFetch: vueUseUseFetchDemo,
       },
       state: {
         createGlobalState: vueUseCreateGlobalStateDemo,
