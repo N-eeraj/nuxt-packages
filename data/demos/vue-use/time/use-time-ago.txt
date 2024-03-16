@@ -1,0 +1,15 @@
+<script setup>
+  import { useTimeAgo } from '@vueuse/core'
+  const date = new Date(2000, 0, 1)
+  const timeAgo = useTimeAgo(date)
+</script>
+
+<template>
+  <div>
+    <strong>
+      {{ timeAgo }}
+    </strong>
+    since
+    {{ date.toLocaleDateString() }}
+  </div>
+</template>

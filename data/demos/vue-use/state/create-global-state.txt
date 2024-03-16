@@ -1,0 +1,15 @@
+<script setup>
+const count = useVueUseStore()
+</script>
+
+<template>
+  <div>
+    <button @click="count++">
+      Count is:
+      {{ count }}
+    </button>
+    <button v-if="count" @click="count=0">
+      Reset
+    </button>
+  </div>
+</template>

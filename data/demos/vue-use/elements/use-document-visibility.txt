@@ -1,0 +1,16 @@
+<script setup>
+import { useDocumentVisibility } from '@vueuse/core'
+
+const visibility = useDocumentVisibility()
+const message = ref('Minimize the page or switch tab then return')
+watch(visibility, (current, prev) => {
+  if (current === 'visible' && prev === 'hidden')
+    message.value = 'Welcome Back!'
+})
+</script>
+
+<template>
+  <span>
+    {{ message }}
+  </span>
+</template>

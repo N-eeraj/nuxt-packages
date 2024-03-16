@@ -1,0 +1,7 @@
+<script setup>
+import { set } from '@vueuse/core'
+const refVal = ref('before')
+console.log(refVal.value) // 'before'
+set(refVal, 'after')
+console.log(refVal.value) // 'after'
+</script>

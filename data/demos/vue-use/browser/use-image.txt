@@ -1,0 +1,32 @@
+<script setup>
+import { useImage } from '@vueuse/core'
+import { ref } from 'vue'
+
+const imageOptions = ref({ src: 'https://place-hold.it/300x200/' })
+const { isLoading, error } = useImage(imageOptions, { delay: 1000 })
+
+const change = () => {
+  imageOptions.value.src = ''
+  imageOptions.value.src = 'https://place-hold.it/300x200/'
+}
+</script>
+
+<template>
+  <div v-if="isLoading">
+    Loading...
+  </div>
+  <div v-else-if="error">
+    Failed
+  </div>
+  <img v-else :src="imageOptions.src">
+
+  <div>
+    <button v-if="!isLoading" @click="change">
+      Change
+    </button>
+    
+    <button v-if="!isLoading" @click="imageOptions.src = ''">
+      Create Error
+    </button>
+  </div>
+</template>
