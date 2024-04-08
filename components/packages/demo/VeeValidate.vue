@@ -4,6 +4,9 @@ const isRequired = value => {
     return 'This field is required'
   return true
 }
+
+const handleForm = ({ input }) => alert(`You entered ${input}`)
+
 const { veeValidateDemo } = useDemoCode()
 </script>
 
@@ -19,9 +22,9 @@ const { veeValidateDemo } = useDemoCode()
       <BaseCodeSnippet :code="veeValidateDemo" file-name="Form.vue" class="flex-1 w-full md:w-5/12" />
     </div>
 
-    <VeeForm class="max-w-xs flex flex-col">
-      <VeeField name="field" placeholder="Enter value" :rules="isRequired" class="p-1" />
-      <VeeErrorMessage name="field" class="text-red-500" />
+    <VeeForm class="max-w-xs flex flex-col" @submit="handleForm">
+      <VeeField name="input" placeholder="Enter value" :rules="isRequired" class="p-1" />
+      <VeeErrorMessage name="input" class="text-red-500" />
     </VeeForm>
 
   <p class="text-light mt-4">

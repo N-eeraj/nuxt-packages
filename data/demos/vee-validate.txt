@@ -4,11 +4,13 @@ const isRequired = value => {
     return 'This field is required'
   return true
 }
+
+const handleForm = ({ input }) => alert(`You entered ${input}`)
 </script>
 
 <template>
-  <VeeForm>
-    <VeeField name="field" placeholder="Enter value" :rules="isRequired" />
-    <VeeErrorMessage name="field" />
+  <VeeForm @submit="handleForm">
+    <VeeField name="input" placeholder="Enter value" :rules="isRequired" />
+    <VeeErrorMessage name="input" />
   </VeeForm>
 </template>
