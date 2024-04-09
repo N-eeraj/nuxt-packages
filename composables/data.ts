@@ -1,7 +1,12 @@
 import techStack from '@/data/tech-stack.json'
 import packageCategoriesIcons from '@/data/package-categories-icons.json'
 
-// demo raw files
+// raw description files
+import aboutDescription from '@/data/descriptions/about.txt?raw'
+import siteDescription from '@/data/descriptions/index.txt?raw'
+import packagesDescription from '@/data/descriptions/packages.txt?raw'
+
+// raw demo files
 import autoAnimateDemo from '@/data/demos/auto-animate.txt?raw'
 import colorModeDemo from '@/data/demos/color-mode.txt?raw'
 import deviceDemo from '@/data/demos/device.txt?raw'
@@ -29,6 +34,14 @@ import vueUseGetDemo from '@/data/demos/vue-use/utilities/get.txt?raw'
 import vueUseSetDemo from '@/data/demos/vue-use/utilities/set.txt?raw'
 import vueUseUseClonedDemo from '@/data/demos/vue-use/utilities/use-cloned.txt?raw'
 import vueUseUseToggleDemo from '@/data/demos/vue-use/utilities/use-toggle.txt?raw'
+
+const useDescription = () => {
+  return {
+    aboutDescription,
+    siteDescription,
+    packagesDescription,
+  }
+}
 
 const useDemoCode = () => {
   return {
@@ -79,5 +92,6 @@ const useDemoCode = () => {
 export {
   techStack,
   packageCategoriesIcons,
+  useDescription,
   useDemoCode,
 }

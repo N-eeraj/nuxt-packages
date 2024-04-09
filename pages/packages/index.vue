@@ -1,5 +1,5 @@
 <script setup>
-import pageDescription from '/data/descriptions/packages.txt?raw'
+const { packagesDescription } = useDescription()
 
 const route = useRoute()
 const { options } = useRouter()
@@ -26,7 +26,7 @@ definePageMeta({
 
 useMeta({
   pageTitle: 'Nuxt Packages: Packages',
-  pageDescription,
+  pageDescription: packagesDescription,
 })
 </script>
 
