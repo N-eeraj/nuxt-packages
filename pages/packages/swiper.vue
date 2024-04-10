@@ -1,5 +1,5 @@
 <script setup>
-const installationCode = `bun i nuxt-swiper`
+const installationCode = `npm i nuxt-swiper`
 const setUpCode = `modules: ['nuxt-swiper']`
 
 definePageMeta({

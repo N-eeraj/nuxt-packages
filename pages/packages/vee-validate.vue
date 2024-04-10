@@ -1,5 +1,5 @@
 <script setup>
-const installationCode = `bun i @vee-validate/nuxt`
+const installationCode = `npm i @vee-validate/nuxt`
 const setUpCode = `modules: ['@vee-validate/nuxt']
 veeValidate: {
   // disable or enable auto imports

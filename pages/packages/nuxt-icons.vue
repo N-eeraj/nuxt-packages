@@ -1,5 +1,5 @@
 <script setup>
-const installationCode = `bun i nuxt-icons`
+const installationCode = `npm i nuxt-icons`
 const setUpCode = `modules: ['nuxt-icons']`
 
 const usageSteps = [

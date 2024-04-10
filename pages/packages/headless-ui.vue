@@ -1,5 +1,5 @@
 <script setup>
-const installationCode = `bun i -D nuxt-headlessui`
+const installationCode = `npm i -D nuxt-headlessui`
 const setUpCode = `modules: ['nuxt-headlessui']`
 
 definePageMeta({

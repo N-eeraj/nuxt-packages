@@ -1,5 +1,5 @@
 <script setup>
-const installationCode = `bun i @nuxtjs/tailwindcss`
+const installationCode = `npm i @nuxtjs/tailwindcss`
 const setUpCode = `modules: ['@nuxtjs/tailwindcss']`
 
 definePageMeta({

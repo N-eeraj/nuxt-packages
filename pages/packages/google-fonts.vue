@@ -1,5 +1,5 @@
 <script setup>
-const installationCode = `bun i -D @nuxtjs/google-fonts`
+const installationCode = `npm i -D @nuxtjs/google-fonts`
 const setUpCode = `modules: ['@nuxtjs/google-fonts'],
 googleFonts: {
   families: {
