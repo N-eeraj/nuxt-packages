@@ -1,5 +1,5 @@
 <script setup>
-const installationCode = `bun i -D @nuxtjs/device`
+const installationCode = `npm i -D @nuxtjs/device`
 const setUpCode = `modules: ['@nuxtjs/device']`
 
 definePageMeta({

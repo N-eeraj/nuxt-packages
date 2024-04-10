@@ -1,5 +1,5 @@
 <script setup>
-const installationCode = `bun i -D @nuxtjs/color-mode`
+const installationCode = `npm i -D @nuxtjs/color-mode`
 const setUpCode = `modules: ['@nuxtjs/color-mode']`
 
 definePageMeta({

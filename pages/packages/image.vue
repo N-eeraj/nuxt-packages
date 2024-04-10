@@ -1,5 +1,5 @@
 <script setup>
-const installationCode = `bun add @nuxt/image`
+const installationCode = `npx nuxi@latest module add image`
 const setUpCode = `modules: ['@nuxt/image']`
 
 definePageMeta({

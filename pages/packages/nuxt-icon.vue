@@ -1,5 +1,5 @@
 <script setup>
-const installationCode = `bun i -D nuxt-icon`
+const installationCode = `npm i -D nuxt-icon`
 const setUpCode = `modules: ['nuxt-icon']`
 
 definePageMeta({
