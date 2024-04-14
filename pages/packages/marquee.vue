@@ -1,5 +1,5 @@
 <script setup>
-const installationCode = `bun i -D nuxt-marquee`
+const installationCode = `npm i -D nuxt-marquee`
 const setUpCode = `modules: ['nuxt-marquee']`
 
 definePageMeta({

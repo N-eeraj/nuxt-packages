@@ -1,5 +1,5 @@
 <script setup>
-const installationCode = `bun i @vueuse/nuxt`
+const installationCode = `npm i @vueuse/nuxt`
 const setUpCode = `modules: ['@vueuse/nuxt']`
 
 definePageMeta({

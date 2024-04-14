@@ -6,7 +6,7 @@ set -e
 rm -rf .nuxt/*
 
 # build
-bun generate
+npm run generate
 
 # navigate into the output directory
 cd ./dist

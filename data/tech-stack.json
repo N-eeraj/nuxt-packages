@@ -6,12 +6,6 @@
     "description": "Nuxt is an open source framework that makes web development intuitive and powerful using Vue JS."
   },
   {
-    "name": "Bun",
-    "logo": "/images/logos/bun.svg",
-    "url": "https://bun.sh",
-    "description": "Used as a fast bundler and package manager."
-  },
-  {
     "name": "Pinia",
     "logo": "/images/logos/pinia.svg",
     "url": "https://pinia.vuejs.org/",

@@ -43,8 +43,8 @@ export default defineNuxtConfig({
     }
   },
   shiki: {
-    theme: 'material-theme-palenight',
-    langs: [
+    defaultTheme: 'material-theme-palenight',
+    bundledLangs: [
       'vue',
       'js',
       'ts',

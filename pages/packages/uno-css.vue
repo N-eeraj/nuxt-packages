@@ -1,5 +1,5 @@
 <script setup>
-const installationCode = `bun i @unocss/nuxt`
+const installationCode = `npm i @unocss/nuxt`
 const setUpCode = `modules: ['@unocss/nuxt']`
 
 definePageMeta({

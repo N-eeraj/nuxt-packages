@@ -41,16 +41,8 @@ const copyCode = () => {
       <code v-if="fileName" class="w-full p-3 bg-background-grey text-light text-sm">
         {{ fileName }}
       </code>
-      <Shiki :code="code || ''" :lang="lang" theme="material-theme-palenight" class="custom-shiki block max-h-72 overflow-y-auto" />
-      <Icon :name="copyIcon" class="absolute top-4 right-4 text-light cursor-pointer" @click="copyCode" />
+      <Shiki :code="code || ''" :lang="lang" theme="material-theme-palenight" :title="fileName" class="block max-w-full min-h-8 max-h-72 p-2 overflow-x-auto bg-[#292D3E] overflow-y-auto" />
+      <Icon :name="copyIcon" class="absolute top-3 right-4 text-light cursor-pointer z-1" @click="copyCode" />
     </div>
   </section>
 </template>
-
-<style scoped>
-.custom-shiki {
-  :deep(pre) {
-    @apply max-w-full min-h-12 p-3 overflow-x-auto;
-  }
-}
-</style>

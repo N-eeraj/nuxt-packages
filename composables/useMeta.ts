@@ -1,4 +1,4 @@
-import siteDescription from '/data/descriptions/index.txt?raw'
+const { siteDescription } = useDescription()
 
 interface MetaObject {
   pageTitle?: string

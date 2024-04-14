@@ -1,5 +1,5 @@
 <script setup>
-const installationCode = `bun i @nuxtjs/i18n --save-dev`
+const installationCode = `npm i @nuxtjs/i18n --save-dev`
 const setUpCode = `modules: ['@nuxtjs/i18n']`
 
 definePageMeta({

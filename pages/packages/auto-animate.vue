@@ -1,5 +1,5 @@
 <script setup>
-const installationCode = `bun i @formkit/auto-animate`
+const installationCode = `npm i @formkit/auto-animate`
 const setUpCode = `modules: ['@formkit/auto-animate/nuxt']`
 
 definePageMeta({

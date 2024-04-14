@@ -1,5 +1,5 @@
 <script setup>
-const installationCode = `bun i @pinia/nuxt`
+const installationCode = `npm i @pinia/nuxt`
 const setUpCode = `modules: ['@pinia/nuxt']`
 
 definePageMeta({
