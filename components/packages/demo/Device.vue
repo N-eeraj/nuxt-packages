@@ -1,5 +1,5 @@
 <script setup>
-const { colorModeDemo } = useDemoCode()
+const { deviceDemo } = useDemoCode()
 </script>
 
 <template>
@@ -10,7 +10,7 @@ const { colorModeDemo } = useDemoCode()
       </h2>
     </NuxtLink>
 
-    <BaseCodeSnippet :code="colorModeDemo" file-name="Device.vue" class="mb-4" />
+    <BaseCodeSnippet :code="deviceDemo" file-name="Device.vue" class="mb-4" />
 
     <div class="text-white">
       <template v-if="$device.isDesktop">

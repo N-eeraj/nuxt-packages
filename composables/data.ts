@@ -9,6 +9,7 @@ import packagesDescription from '@/data/descriptions/packages.txt?raw'
 // raw demo files
 import autoAnimateDemo from '@/data/demos/auto-animate.txt?raw'
 import colorModeDemo from '@/data/demos/color-mode.txt?raw'
+import dayJsDemo from '@/data/demos/day-js.txt?raw'
 import deviceDemo from '@/data/demos/device.txt?raw'
 import googleFontsDemo from '@/data/demos/google-fonts.txt?raw'
 import headlessUIDemo from '@/data/demos/headless-ui.txt?raw'
@@ -47,6 +48,7 @@ const useDemoCode = () => {
   return {
     autoAnimateDemo,
     colorModeDemo,
+    dayJsDemo,
     deviceDemo,
     googleFontsDemo,
     headlessUIDemo,
