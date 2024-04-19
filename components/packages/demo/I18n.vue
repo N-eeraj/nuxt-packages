@@ -12,10 +12,10 @@ const { i18nDemo } = useDemoCode()
       </h2>
     </NuxtLink>
 
-<div class="flex gap-x-5 flex-wrap mb-4">
-  <BaseCodeSnippet :code="i18nConfig" lang="ts" file-name="i18n.config.ts" class="flex-1 w-full md:w-5/12" />
-  <BaseCodeSnippet :code="i18nDemo" file-name="Heading.vue" class="flex-1 w-full md:w-5/12" />
-</div>
+    <div class="flex gap-x-5 flex-wrap mb-4">
+      <BaseCodeSnippet :code="i18nConfig" lang="ts" file-name="i18n.config.ts" class="flex-1 w-full md:w-5/12" />
+      <BaseCodeSnippet :code="i18nDemo" file-name="Heading.vue" class="flex-1 w-full md:w-5/12" />
+    </div>
 
     <select v-model="locale">
       <option value="en">

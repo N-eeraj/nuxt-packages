@@ -1,0 +1,10 @@
+<script setup>
+const dayjs = useDayjs()
+const dateTime = computed(() => dayjs().format('DD MMM, YYYY') )
+</script>
+
+<template>
+  <span>
+    {{ dateTime }}
+  </span>
+</template>
