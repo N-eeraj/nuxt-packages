@@ -31,6 +31,7 @@
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/tailwindcss": "^6.11.4",
     "@unocss/nuxt": "^0.58.4",
+    "@vite-pwa/nuxt": "^0.6.0",
     "dayjs-nuxt": "^2.1.9",
     "nuxt": "^3.8.1",
     "nuxt-headlessui": "^1.1.5",
