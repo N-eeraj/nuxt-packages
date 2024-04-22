@@ -55,6 +55,7 @@ export default defineNuxtConfig({
     },
   },
   pwa: {
+    registerType: 'autoUpdate',
     manifest: {
       name: projectName,
       short_name: projectName,
@@ -88,10 +89,19 @@ export default defineNuxtConfig({
       display: 'fullscreen',
       background_color: '#020420',
       theme_color: '#00DC82',
+      lang:'en',
       description: 'Supercharge your web development with Nuxt.js! Explore powerful packages, seamless Vue.js integration, and unleash your creativity today.',
     },
+    includeAssets: [
+      '/images/pwa/favicon.ico',
+      '/images/pwa/apple-touch-icon.png',
+      '/images/pwa/mask-icon.svg',
+    ],
     workbox: {
       navigateFallback: '/',
+    },
+    devOptions: {
+      enabled: true,
     },
   },
   runtimeConfig: {

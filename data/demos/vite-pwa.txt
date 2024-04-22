@@ -1,0 +1,50 @@
+pwa: {
+  registerType: 'autoUpdate',
+  manifest: {
+    name: 'Project Name',
+    short_name: 'Project Name',
+    icons: [
+      {
+        src: '/images/pwa/192x192.png',
+        sizes: '192x192',
+        type: 'image/png',
+        purpose: 'any'
+      },
+      {
+        src: '/images/pwa/512x512.png',
+        sizes: '512x512',
+        type: 'image/png',
+        purpose: 'any'
+      },
+      {
+        src: '/images/pwa/maskable-192x192.png',
+        sizes: '192x192',
+        type: 'image/png',
+        purpose: 'maskable'
+      },
+      {
+        src: '/images/pwa/maskable-512x512.png',
+        sizes: '512x512',
+        type: 'image/png',
+        purpose: 'maskable'
+      }
+    ],
+    start_url: '/',
+    display: 'fullscreen',
+    background_color: '#020420',
+    theme_color: '#00DC82',
+    lang:'en',
+    description: 'Description',
+  },
+  includeAssets: [
+    '/images/pwa/favicon.ico',
+    '/images/pwa/apple-touch-icon.png',
+    '/images/pwa/mask-icon.svg',
+  ],
+  workbox: {
+    navigateFallback: '/',
+  },
+  devOptions: {
+    enabled: true,
+  },
+}

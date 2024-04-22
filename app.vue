@@ -4,6 +4,7 @@ useMeta()
 
 <template>
   <NuxtPwaManifest />
+
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
