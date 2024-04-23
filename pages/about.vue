@@ -26,8 +26,8 @@ useMeta({
         </h2>
 
         <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <li v-for="({ name, logo, url, description }) in techStack" class="cols-1" :key="url">
-            <AboutTechnology :name="name" :logo="logo" :url="url" :description="description" />
+          <li v-for="tech in techStack" class="cols-1" :key="tech.url">
+            <AboutTechnology v-bind="tech" />
           </li>
         </ul>
       </article>
