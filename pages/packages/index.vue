@@ -42,7 +42,7 @@ useMeta({
           Categories
         </span>
         <ul class="mt-3">
-          <PackagesCategory v-for="category in categories" :category="category" :key="category" />
+          <PackagesCategory v-for="category in categories" :category :key="category" />
         </ul>
       </div>
 
@@ -52,7 +52,7 @@ useMeta({
         </div>
 
         <div v-auto-animate class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
-          <PackagesCard v-for="({ name, path, description, logo }) in packagesList" :name="name" :path="path" :description="description" :logo="logo" :key="name" />
+          <PackagesCard v-for="details in packagesList" v-bind="details" :key="details.name" />
         </div>
       </div>
     </div>
