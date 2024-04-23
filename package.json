@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --host",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "check": "npm run generate && npm run preview",
@@ -30,6 +30,7 @@
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/tailwindcss": "^6.11.4",
     "@unocss/nuxt": "^0.58.4",
+    "@vite-pwa/nuxt": "^0.6.0",
     "dayjs-nuxt": "^2.1.9",
     "nuxt": "^3.11.2",
     "nuxt-headlessui": "^1.1.5",

@@ -3,5 +3,6 @@
   "Fonts": "ph:text-aa-duotone",
   "Images": "ph:image-duotone",
   "Libraries": "ph:books-duotone",
+  "Performance": "ph:gauge-duotone",
   "UI": "ph:layout-duotone"
 }

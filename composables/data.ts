@@ -23,6 +23,7 @@ import swiperDemo from '@/data/demos/swiper.txt?raw'
 import tailwindDemo from '@/data/demos/tailwind.txt?raw'
 import unoCSSDemo from '@/data/demos/uno-css.txt?raw'
 import veeValidateDemo from '@/data/demos/vee-validate.txt?raw'
+import vitePWADemo from '@/data/demos/vite-pwa.txt?raw'
 import vueUseOnLongPressDemo from '@/data/demos/vue-use/browser/on-long-press.txt?raw'
 import vueUseUseClipboardDemo from '@/data/demos/vue-use/browser/use-clipboard.txt?raw'
 import vueUseImageDemo from '@/data/demos/vue-use/browser/use-image.txt?raw'
@@ -62,6 +63,7 @@ const useDemoCode = () => {
     tailwindDemo,
     unoCSSDemo,
     veeValidateDemo,
+    vitePWADemo,
     vueUseDemos: {
       browser: {
         onLongPress: vueUseOnLongPressDemo,
