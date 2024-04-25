@@ -22,6 +22,7 @@ import piniaDemo from '@/data/demos/pinia.txt?raw'
 import swiperDemo from '@/data/demos/swiper.txt?raw'
 import tailwindDemo from '@/data/demos/tailwind.txt?raw'
 import unoCSSDemo from '@/data/demos/uno-css.txt?raw'
+import vCalendarDemo from '@/data/demos/vcalendar.txt?raw'
 import veeValidateDemo from '@/data/demos/vee-validate.txt?raw'
 import vitePWADemo from '@/data/demos/vite-pwa.txt?raw'
 import vueUseOnLongPressDemo from '@/data/demos/vue-use/browser/on-long-press.txt?raw'
@@ -62,6 +63,7 @@ const useDemoCode = () => {
     swiperDemo,
     tailwindDemo,
     unoCSSDemo,
+    vCalendarDemo,
     veeValidateDemo,
     vitePWADemo,
     vueUseDemos: {
