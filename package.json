@@ -34,6 +34,7 @@
     "@vite-pwa/nuxt": "^0.6.0",
     "dayjs-nuxt": "^2.1.9",
     "nuxt": "^3.11.2",
+    "nuxt-bootstrap-icons": "^2.0.0",
     "nuxt-headlessui": "^1.1.5",
     "nuxt-icon": "^0.6.8",
     "nuxt-marquee": "^1.0.2",

@@ -23,6 +23,7 @@ export default defineNuxtConfig({
     'nuxt-marquee',
     '@nuxtjs/device',
     'dayjs-nuxt',
+    'nuxt-bootstrap-icons',
     'nuxt-simple-sitemap',
   ],
   shiki: {
@@ -103,6 +104,9 @@ export default defineNuxtConfig({
     devOptions: {
       enabled: true,
     },
+  },
+  bootstrapIcons: {
+    display: 'inline',
   },
   runtimeConfig: {
     public: {
