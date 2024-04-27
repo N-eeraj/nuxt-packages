@@ -1,0 +1,4 @@
+<template>
+  <BootstrapIcon name="airplane-engines-fill" />
+  <BootstrapIcon name="train-front" />
+</template>
