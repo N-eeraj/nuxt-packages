@@ -53,7 +53,9 @@ useMeta({
         </NuxtLink>
       </template>
       <template #description>
-        <slot name="setup-description" />
+        <slot name="setup-description">
+          Add the following lines to the modules section of nuxt.config.{ts,js}
+        </slot>
       </template>
       <slot name="setup" />
     </BaseCodeSnippet>

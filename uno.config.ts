@@ -15,6 +15,7 @@ export default defineConfig({
       background: {
         DEFAULT: '#020420',
         grey: '#0F172A',
+        code: '#292D3E',
       },
       primary: '#00DC82',
       light: {

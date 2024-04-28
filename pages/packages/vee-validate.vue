@@ -23,9 +23,6 @@ definePageMeta({
 
 <template>
   <PackagesLayout :installation-code :set-up-code>
-    <template #setup-description>
-      Add the following lines to nuxt.config.{ts,js}
-    </template>
     <PackagesDemoVeeValidate />
   </PackagesLayout>
 </template>

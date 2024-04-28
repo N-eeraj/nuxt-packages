@@ -11,9 +11,6 @@ definePageMeta({
 
 <template>
   <PackagesLayout :installation-code :set-up-code>
-    <template #setup-description>
-      Add the following line to the modules section of nuxt.config.{ts,js}
-    </template>
     <PackagesDemoDevice />
   </PackagesLayout>
 </template>

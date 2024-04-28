@@ -47,7 +47,7 @@ const currentPath = computed(() => route.path)
       <li v-for="({ name, path, meta }) in packagesNavigations" :key="path">
         <NuxtLink :to="path" class="flex items-center gap-x-2 w-full cursor-pointer text-xl md:text-lg hover:text-light" :class="{ '!text-primary': currentPath === path }" @click="$emit('update:open', false)">
           <img v-if="meta.logo" :src="`/images/logos/${meta.logo}`" :alt="name" class="w-4" />
-          <Icon v-else name="ph:puzzle-piece-duotone" class="box-content w-4 h-4 text-gray-400" />
+          <Icon v-else :name="packageCategoriesIcons[meta.category]" class="box-content w-4 h-4 text-gray-400" />
           <span>
             {{ name }}
           </span>
