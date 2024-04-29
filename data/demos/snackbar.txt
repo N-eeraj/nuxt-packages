@@ -1,0 +1,15 @@
+<script setup>
+const snackbar = useSnackbar()
+const showSnackbar = () => {
+  snackbar.add({
+    type: 'success',
+    text: 'Snackbar Text'
+  })
+}
+</script>
+
+<template>
+  <button @click="showSnackbar">
+    Show Snackbar
+  </button>
+</template>

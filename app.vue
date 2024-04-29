@@ -8,6 +8,8 @@ useMeta()
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
+
+  <NuxtSnackbar />
 </template>
 
 <style src="@/styles/common.css"></style>
