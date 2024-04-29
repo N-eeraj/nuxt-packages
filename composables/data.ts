@@ -21,6 +21,7 @@ import nuxtIconDemo from '@/data/demos/nuxt-icon.txt?raw'
 import nuxtIconsDemo from '@/data/demos/nuxt-icons.txt?raw'
 import piniaDemo from '@/data/demos/pinia.txt?raw'
 import swiperDemo from '@/data/demos/swiper.txt?raw'
+import snackbarDemo from '@/data/demos/snackbar.txt?raw'
 import tailwindDemo from '@/data/demos/tailwind.txt?raw'
 import unoCSSDemo from '@/data/demos/uno-css.txt?raw'
 import vCalendarDemo from '@/data/demos/vcalendar.txt?raw'
@@ -63,6 +64,7 @@ const useDemoCode = () => {
     nuxtIconsDemo,
     piniaDemo,
     swiperDemo,
+    snackbarDemo,
     tailwindDemo,
     unoCSSDemo,
     vCalendarDemo,

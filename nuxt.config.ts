@@ -23,6 +23,7 @@ export default defineNuxtConfig({
     'nuxt-marquee',
     '@nuxtjs/device',
     'dayjs-nuxt',
+    'nuxt-snackbar',
     'nuxt-bootstrap-icons',
     'nuxt-simple-sitemap',
   ],
@@ -104,6 +105,11 @@ export default defineNuxtConfig({
     devOptions: {
       enabled: true,
     },
+  },
+  snackbar: {
+    bottom: true,
+    right: true,
+    duration: 3000
   },
   bootstrapIcons: {
     display: 'inline',
