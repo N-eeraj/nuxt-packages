@@ -19,6 +19,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxtjs/color-mode',
     'nuxt-swiper',
+    'nuxt-aos',
     '@nuxtjs/i18n',
     'nuxt-marquee',
     '@nuxtjs/device',

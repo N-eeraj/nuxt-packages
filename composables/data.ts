@@ -7,6 +7,7 @@ import siteDescription from '@/data/descriptions/index.txt?raw'
 import packagesDescription from '@/data/descriptions/packages.txt?raw'
 
 // raw demo files
+import aosDemo from '@/data/demos/aos.txt?raw'
 import autoAnimateDemo from '@/data/demos/auto-animate.txt?raw'
 import bootstrapIconsDemo from '@/data/demos/bootstrap-icons.txt?raw'
 import colorModeDemo from '@/data/demos/color-mode.txt?raw'
@@ -50,6 +51,7 @@ const useDescription = () => {
 
 const useDemoCode = () => {
   return {
+    aosDemo,
     autoAnimateDemo,
     colorModeDemo,
     bootstrapIconsDemo,
