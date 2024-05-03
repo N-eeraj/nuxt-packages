@@ -1,0 +1,5 @@
+<template>
+  <div data-aos="fade-up">
+    Hello
+  </div>
+</template>
