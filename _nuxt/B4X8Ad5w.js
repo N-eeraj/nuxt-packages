@@ -1,0 +1,1 @@
+import{_ as e}from"./DlAUqK2U.js";import{y as t,D as r,H as n}from"./C-D7RAXM.js";const s={},c={class:"px-3.5 py-2.5 rounded-md cursor-pointer"};function _(o,a){return t(),r("button",c,[n(o.$slots,"default")])}const m=e(s,[["render",_]]);export{m as _};
