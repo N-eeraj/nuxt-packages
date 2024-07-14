@@ -1,0 +1,1 @@
+const o="ph:puzzle-piece-duotone",e="ph:text-aa-duotone",n="ph:image-duotone",t="ph:books-duotone",s="ph:gauge-duotone",a="ph:layout-duotone",c={Extensions:o,Fonts:e,Images:n,Libraries:t,Performance:s,UI:a};export{c as _};

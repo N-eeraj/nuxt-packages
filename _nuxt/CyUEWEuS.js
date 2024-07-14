@@ -1,0 +1,1 @@
+import{q as r}from"./B0zDXpjV.js";import{a as s}from"./C-D7RAXM.js";const f=r("toast",()=>{const t=s(!1),o=s(null);return{showToast:t,textToast:o,setToast:(e,a=null)=>{t.value=e,o.value=a}}});export{f as u};
